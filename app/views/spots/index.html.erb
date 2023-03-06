@@ -1,0 +1,4 @@
+<% @spots.each do |spot| %>
+<h1><%= spot.name %></h1>
+<%= spot.spot_location %> (<%= spot.latitude %> <%= spot.longitude %>)
+<% end %>
