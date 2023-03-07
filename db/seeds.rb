@@ -16,3 +16,5 @@ Spot.create!(
   longitude: -9.206633604395881,
   spot_location: "Praça do Império 1400-206 Lisboa"
 )
+
+
