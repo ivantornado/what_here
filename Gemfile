@@ -77,4 +77,14 @@ group :test do
   gem "webdrivers"
 end
 
+
 gem 'acts_as_favoritor'
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+
+
+gem "cloudinary"
+

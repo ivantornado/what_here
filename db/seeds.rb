@@ -17,6 +17,7 @@ Spot.create!(
   spot_location: "Praça do Império 1400-206 Lisboa"
 )
 
+
 Spot.create!(
   name: "test",
   description: "Late Gothic Manueline-style monastery housing archaeology & maritime museums in its wings.",
