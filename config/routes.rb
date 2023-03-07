@@ -5,6 +5,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :spots, only: %i[index show]
-  get '/profile', to: 'pages#planets'
+
+  resources :spots, only: %i[index show] do
+    member do
+      post 'toggle_favorite', to: "spots#toggle_favorite"
+    end
+  end
+
+  get '/profile', to: 'pages#profile'
+
 end

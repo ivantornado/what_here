@@ -5,5 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :likes
   has_many :bucket_items
+
+  acts_as_favoritor
+
   has_one_attached :photo
+
 end

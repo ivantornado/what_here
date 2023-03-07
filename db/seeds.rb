@@ -18,3 +18,64 @@ Spot.create!(
 )
 
 
+Spot.create!(
+  name: "test",
+  description: "Late Gothic Manueline-style monastery housing archaeology & maritime museums in its wings.",
+  price: 4,
+  category: "monument",
+  latitude: 38.697767982055346,
+  longitude: -9.206633604395881,
+  spot_location: "Praça do Império 1400-206 Lisboa"
+)
+
+Spot.create!(
+  name: "random",
+  description: "Late Gothic Manueline-style monastery housing archaeology & maritime museums in its wings.",
+  price: 4,
+  category: "monument",
+  latitude: 38.697767982055346,
+  longitude: -9.206633604395881,
+  spot_location: "Praça do Império 1400-206 Lisboa"
+)
+
+Spot.create!(
+  name: "hey",
+  description: "Late Gothic Manueline-style monastery housing archaeology & maritime museums in its wings.",
+  price: 4,
+  category: "monument",
+  latitude: 38.697767982055346,
+  longitude: -9.206633604395881,
+  spot_location: "Praça do Império 1400-206 Lisboa"
+)
+
+Spot.create!(
+  name: "bye",
+  description: "Late Gothic Manueline-style monastery housing archaeology & maritime museums in its wings.",
+  price: 4,
+  category: "monument",
+  latitude: 38.697767982055346,
+  longitude: -9.206633604395881,
+  spot_location: "Praça do Império 1400-206 Lisboa"
+)
+
+Spot.create!(
+  name: "cheers",
+  description: "Late Gothic Manueline-style monastery housing archaeology & maritime museums in its wings.",
+  price: 4,
+  category: "monument",
+  latitude: 38.697767982055346,
+  longitude: -9.206633604395881,
+  spot_location: "Praça do Império 1400-206 Lisboa"
+)
+
+User.destroy_all
+
+User.create!(
+  email: "admin@admin.com",
+  password: "adminadmin"
+)
+
+User.create!(
+  email: "user@user.com",
+  password: "useruser"
+)
