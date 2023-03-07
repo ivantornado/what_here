@@ -1,15 +1,19 @@
 .sign-in-buttons-container {
 
-  padding-top: 400px;
+  padding-top: 320px;
 }
 
 
 .container {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding-left:  30px;
+  padding-right:  30px;
+  padding-top: 150px;
+
   text-align: center;
   align-items: center;
+  height: 100vh;
 }
 
 .container h1 {
@@ -25,4 +29,12 @@
   color: rgb(0, 0, 0);
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.homelogo {
+  padding: 20px 30px;
+  text-align: center;
+  align-items: center;
+
+
 }
