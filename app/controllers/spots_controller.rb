@@ -17,7 +17,6 @@ class SpotsController < ApplicationController
 
   def favorites
     @favorites = current_user.all_favorites
-    
   end
 
   private
