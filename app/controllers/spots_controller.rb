@@ -15,6 +15,11 @@ class SpotsController < ApplicationController
     redirect_to spots_path, notice: "#{@spot.name} added!"
   end
 
+  def favorites
+    @favorites = current_user.all_favorites
+    
+  end
+
   private
 
   def spot_params
