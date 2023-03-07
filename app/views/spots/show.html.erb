@@ -1,2 +1,11 @@
-<%= @spot.name %>
-<%= @spot.description %>
+
+<div class="card-trip">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <div class="card-trip-infos">
+    <div>
+      <h3><%= @spot.name %></h3>
+      <p><%= @spot.description %></p>
+    </div>
+    <h2 class="card-trip-pricing"><%= @spot.price %>€</h2>
+  </div>
+</div>
