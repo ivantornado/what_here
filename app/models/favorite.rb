@@ -9,5 +9,4 @@ class Favorite < ApplicationRecord
   def block!
     update!(blocked: true)
   end
-
 end
