@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>What Here</title>
+    <title>WhatHere</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,9 +10,14 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body><%= render "shared/navbar" %>
-<%= render "shared/flashes" %>
-
-    <%= yield %>
-  </body>
+  <body>
+    <div class="page-container">
+      <%= render "shared/navbar" %>
+        <%= render "shared/flashes" %>
+      <main id="main-content">
+        <%= yield %>
+      </main>
+    <%= render "shared/footer" %>
+  </div>
+ </body>
 </html>

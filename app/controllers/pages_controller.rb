@@ -6,4 +6,8 @@ class PagesController < ApplicationController
       redirect_to spots_path
     end
   end
+
+  def profile
+  end
+  
 end
