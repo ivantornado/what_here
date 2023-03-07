@@ -1,10 +1,8 @@
-<% @spots.each do |spot| %>
+<% @spots.each   do |spot| %>
   <div class="card">
     <%= link_to spot_path(spot), style:"text-decoration:none; color:black;" do %>
       <h1><%= spot.name %></h1>
-      <%= spot.spot_location %>
       <%= link_to 'like', toggle_favorite_spot_path(spot), data:{turbo_method: :post} %>
     <% end %>
   </div>
 <% end %>
-
