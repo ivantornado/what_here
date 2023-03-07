@@ -1,13 +1,22 @@
+.sign-in-buttons-container {
 
-.banner {
-  background-size: cover;
-  background-position: center;
-  padding: 130px 0;
-  text-align: center;
-  align-items: center;
+  padding-top: 320px;
 }
 
-.banner h1 {
+
+.container {
+  background-size: cover;
+  background-position: center;
+  padding-left:  30px;
+  padding-right:  30px;
+  padding-top: 150px;
+
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container h1 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -15,9 +24,17 @@
   font-weight: bold;
 }
 
-.banner p {
+.container p {
   font-size: 23px;
   color: rgb(0, 0, 0);
-  opacity: .85;
+  opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.homelogo {
+  padding: 20px 30px;
+  text-align: center;
+  align-items: center;
+
+
 }
