@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :spots, only: %i[index show]
-  get '/profile', to: 'pages#planets'
+  get '/profile', to: 'pages#profile'
 end

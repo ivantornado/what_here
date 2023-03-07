@@ -1,0 +1,31 @@
+
+.footer-container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 100px);
+  position: sticky;
+  bottom: 0px;
+}
+
+.homepage-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.button {
+  cursor:pointer;
+  font-size: 1rem;
+  border: transparent;
+  background-color: transparent;
+  outline: none;
+  height: 70px;
+}
+
+.page-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
