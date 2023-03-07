@@ -3,6 +3,8 @@ class SpotsController < ApplicationController
 
   def index
     @spots = Spot.all
+    @client = GooglePlaces::Client.new(ENV.fetch('API_KEY'))
+    @lisbons = @client.spots(38.725119, -9.150248, radius: 300, types: ['museum', 'bar'])
   end
 
   def show
