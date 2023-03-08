@@ -1,20 +1,34 @@
 
-<div class="container">
 
-  <div class="details_card">
-    <% @spots.each do |spot| %>
+<div class="card-index" style="position: relative;">
+  <% @spots.each do |spot| %>
       <%# <%= next if spot.favoritable? %>
-      <%= link_to spot_path(spot.id), style:"text-decoration:none; color:black;" do %>
-        </div>
-        <h1><%= spot.name %></h1>
-        <div>
-        <%= image_tag  spot.photo %>
-          <%= spot.spot_location %>
-        </div>
+    <%= link_to spot_path(spot.id), style:"text-decoration:none; color:black;" do %>
+      <div style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<% image_tag  spot.photo %>);">
+
+        <h2 style="position: absolute; bottom: 15px; left: 15px; color: white; font-size: 35px;"><%= spot.name %></h2>
+        <h2 class="card-trip-pricing" style="position: absolute; top: 15px; left: 15px; color: white; font-size: 35px;"><%= spot.rating %>⭐️</h2>
+
+
+        <p><i class="fa-solid fa-location-dot" style="color:#0074b7"></i> <%= spot.spot_location %></p>
+        <p><i class="fa-sharp fa-solid fa-info" style="color:#0074b7"></i><%= spot.description %></p>
 
         <%= link_to 'like', toggle_favorite_spot_path(spot), data:{turbo_method: :post} %>
+      </div>
       <% end %>
-    <% end %>
+   <% end %>
+
+      <%# <%= link_to 'Add to Liked', toggle_favorite_spot_path(spot), data:{turbo_method: :post}, class:"btn-black text-decoration-none"%> %>
+    </div>
   </div>
 </div>
 
+<%# javascript %>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const chevronLeft = document.querySelector('.fa-chevron-left');
+    chevronLeft.addEventListener('click', () => {
+      window.history.back();
+    });
+  });
+</script>
