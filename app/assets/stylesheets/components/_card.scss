@@ -6,8 +6,6 @@
   background-color: white .8;
 }
 
-// .card h2{
-
 
 // }
 .show_card {
@@ -50,11 +48,9 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  position: relative;
 }
 
 .card-trip-infos .card-trip-user {
-  position: absolute;
   right: 16px;
   top: -20px;
   width: 40px;
@@ -64,6 +60,7 @@
 // -------------for the index page
 
 .card-index {
+  position: relative;
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -71,7 +68,7 @@
 }
 
 .card-index > img {
-  height: 700px;
+  height: 100%;
   width: 100%;
   object-fit: cover;
 }
@@ -105,7 +102,22 @@
 }
 
 
-// --------------fav page card
+
+// -------------- card for swipe
+.card-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-50%);
+  width: 300px; /* adjust to your desired card width */
+  height: 300px; /* adjust to your desired card height */
+  background-color: white; /* or whatever color you want for the card background */
+  border: 1px solid black; /* or whatever border style you want */
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* optional: add a box shadow to the cards for depth */
+}
+
+
 
 .fav-card {
   background-size: cover;
@@ -121,4 +133,5 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+
 
