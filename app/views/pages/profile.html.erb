@@ -6,3 +6,7 @@
 <%# <% end %>
 <%# THIS FORM IS FOR THE USER TO UPLOAD A PROFILE PICTURE %>
 <h1>profile page</h1>
+
+<%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+
+<%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}%>
