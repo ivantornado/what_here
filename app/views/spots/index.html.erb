@@ -12,6 +12,7 @@
 
         <p><i class="fa-solid fa-location-dot" style="color:#0074b7"></i> <%= spot.spot_location %></p>
         <p><i class="fa-sharp fa-solid fa-info" style="color:#0074b7"></i><%= spot.description %></p>
+
         <%= link_to 'like', toggle_favorite_spot_path(spot), data:{turbo_method: :post} %>
       </div>
       <% end %>
