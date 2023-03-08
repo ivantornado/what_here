@@ -7,8 +7,11 @@
       <%= link_to spot_path(spot.id), style:"text-decoration:none; color:black;" do %>
         </div>
         <h1><%= spot.name %></h1>
-        <%= spot.spot_location %>
-        <div><%= image_tag  spot.photo %></div>
+        <div>
+        <%= image_tag  spot.photo %>
+          <%= spot.spot_location %>
+        </div>
+
         <%= link_to 'like', toggle_favorite_spot_path(spot), data:{turbo_method: :post} %>
       <% end %>
     <% end %>
