@@ -1,12 +1,33 @@
-<%# THIS FORM IS FOR THE USER TO UPLOAD A PROFILE PICTURE %>
-<%# <%= simple_form_for(article) do |f| %>
-  <!-- [...] -->
-  <%# <%= f.input :photo, as: :file %>
-  <!-- [...] -->
-<%# <% end %>
-<%# THIS FORM IS FOR THE USER TO UPLOAD A PROFILE PICTURE %>
-<h1>profile page</h1>
 
-<%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
 
-<%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}%>
+
+<div class="d-flex justify-content-center flex-column align-items-center">
+  <div class="avatar-big">
+    <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", style: "width:110px", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false%>
+    <p><%= current_user.email %></p>
+  </div>
+  <div id = "container">
+    <div class="row">
+      <div class="col">
+        <button type = "button" id = "b1" class = "small_btn">Restaurants</button>
+      </div>
+      <div class="col">
+        <button type = "button" id = "b1" class = "small_btn">Bars</button>
+      </div>
+      <div class="col">
+        <button type = "button" id = "b1" class = "small_btn">Monuments</button>
+      </div>
+      <div class="col">
+        <button type = "button" id = "b1" class = "small_btn">Restaurants</button>
+      </div>
+      <div class="col">
+        <button type = "button" id = "b1" class = "small_btn">Restaurants</button>
+      </div>
+    </div>
+    <div class="row" id="second">
+      <div class="col">
+      </div>
+      <p>Choose your prefered categories</p>
+    </div>
+  </div>
+</div>
