@@ -1,5 +1,5 @@
 class Spot < ApplicationRecord
-  has_many :likes
-  has_many :bucket_items
+  has_many :favorites
+  has_many :bookmarks
   acts_as_favoritable
 end
