@@ -18,7 +18,29 @@
   background: #000000;
   color: white;
 }
+// --------------
+.btn-black {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #000000;
+  transition: 0.3s ease;
+  // width: 150px;
+  text-align: center;
+  width: 354px;
+  height: 55px;
+  left: 13px;
+  top: 518px;
+  display: inline-block;
 
+}
+
+.btn-flat:hover {
+  background: #35b6fe;
+  color: white;
+}
+
+// ------------
 .btn-small {
   color: white;
   // padding: 30px;

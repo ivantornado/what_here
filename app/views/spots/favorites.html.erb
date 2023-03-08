@@ -1,3 +1,6 @@
+<h2>Your Liked Spots</h2>
 <% @favorites.each do |favorite| %>
-<p><%= favorite.favoritable.name %></p>
+  <%= link_to spot_path(favorite.favoritable_id), style:"text-decoration:none; color:black;" do %>
+    <p><%= favorite.favoritable.name %></p>
+  <% end %>
 <% end %>
