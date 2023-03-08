@@ -3,9 +3,10 @@ class SpotsController < ApplicationController
 
   def index
     @client = GooglePlaces::Client.new(ENV.fetch('API_KEY'))
-    @places = @client.spots(38.725119, -9.150248, radius: 500, types: ['museum'], photos: true)
+    @places = @client.spots(38.725119, -9.150248, radius: 500, types: ['museum'])
     @places.each do |place|
-      reference = place.photos[0].photo_reference
+      next if place.photos.empty?
+
       Spot.create(
         name: place.name,
         category: place.rating,
@@ -13,7 +14,7 @@ class SpotsController < ApplicationController
         latitude: place.lat,
         longitude: place.lng,
         description: "https://maps.googleapis.com/maps/api/place/details/",
-        photo: "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&maxheight=400&photo_reference=#{reference}&key=#{ENV.fetch('API_KEY')}",
+        photo: "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&maxheight=400&photo_reference=#{place.photos[0].photo_reference}&key=#{ENV.fetch('API_KEY')}",
         rating: place.rating
       )
 

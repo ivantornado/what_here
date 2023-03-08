@@ -3,6 +3,7 @@
 
   <div class="details_card">
     <% @spots.each do |spot| %>
+      <%# <%= next if spot.favoritable? %>
       <%= link_to spot_path(spot.id), style:"text-decoration:none; color:black;" do %>
         </div>
         <h1><%= spot.name %></h1>
