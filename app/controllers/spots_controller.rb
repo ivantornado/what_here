@@ -12,7 +12,7 @@ class SpotsController < ApplicationController
   def toggle_favorite
     @spot = Spot.find_by(id: params[:id])
     current_user.favorited?(@spot) ? current_user.unfavorite(@spot) : current_user.favorite(@spot)
-    redirect_to spots_path, notice: "#{@spot.name} added!"
+    redirect_to spots_path
   end
 
   def favorites
