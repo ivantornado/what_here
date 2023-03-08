@@ -1,20 +1,15 @@
-
-<div class="container">
-
-  <div class="details_card">
+<div class="card-container">
     <% @spots.each do |spot| %>
-      <%# <%= next if spot.favoritable? %>
-      <%= link_to spot_path(spot.id), style:"text-decoration:none; color:black;" do %>
-        </div>
-        <h1><%= spot.name %></h1>
-        <div>
-        <%= image_tag  spot.photo %>
-          <%= spot.spot_location %>
-        </div>
-
-        <%= link_to 'like', toggle_favorite_spot_path(spot), data:{turbo_method: :post} %>
-      <% end %>
+      <div class="details-card">
+        <% next if current_user.favorites.each { |favorite| favorite.favoritable_id == spot.id}.present? %>
+        <%= link_to spot_path(spot.id), style:"text-decoration:none; color:black;" do %>
+          <h1><%= spot.name %></h1>
+          <div>
+            <%= image_tag  spot.photo %>
+            <%= spot.spot_location %>
+          </div>
+          <%= link_to 'like', toggle_favorite_spot_path(spot), data:{turbo_method: :post} %>
+        <% end %>
+      </div>
     <% end %>
-  </div>
 </div>
-
