@@ -5,6 +5,7 @@
   <%# <% else %>
     <i class="fa-regular fa-bookmark" style="position: absolute; top: 15px; right: 15px; color: white; font-size: 35px;"></i>
   <%# <% end %>
+  <i class="fa-solid fa-chevron-left" style="position: absolute; top: 15px; left: 15px; color: white; font-size: 35px;"></i>
   <h2 class="card-trip-pricing" style="position: absolute; top: 437px; right: 10px; color: white; font-size: 22px;"><%= @spot.rating %>⭐️</h2>
   <div class="card-trip-infos">
     <div>
@@ -12,7 +13,18 @@
       <p><i class="fa-solid fa-location-dot" style="color:#0074b7"></i> <%= @spot.spot_location %></p>
       <p><i class="fa-sharp fa-solid fa-info" style="color:#0074b7"></i><%= @spot.description %></p>
       <br>
+
       <%= link_to 'Add to Liked', toggle_favorite_spot_path(@spot), data:{turbo_method: :post}, class:"btn-black text-decoration-none"%>
     </div>
   </div>
 </div>
+
+<%# javascript %>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const chevronLeft = document.querySelector('.fa-chevron-left');
+    chevronLeft.addEventListener('click', () => {
+      window.history.back();
+    });
+  });
+</script>
