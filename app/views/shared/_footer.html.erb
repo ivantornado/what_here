@@ -1,61 +1,63 @@
-<% if controller_name == 'pages' && action_name == 'home' %>
-  <div class='footer-container'>
-    <%= link_to root_path, class: "homepage-icon" do %>
-      <i class="fa-solid fa-house" style='color:#35B5FF'></i>
-    <% end %>
-    <%= link_to favorites_path, class: "homepage-icon" do %>
-      <i class="fa-solid fa-heart" style='color:lightgrey'></i>
-    <% end %>
-    <%= link_to bookmarks_path, class: "homepage-icon" do %>
-      <i class="fa-solid fa-bookmark" style='color:lightgrey'></i>
-    <% end %>
-    <%= link_to profile_path, class: "homepage-icon" do %>
-      <i class="fa-solid fa-user" style='color:lightgrey'></i>
-    <% end %>
-  </div>
+
+<% if controller_name == 'spots' && action_name == 'index' %>
+ <div class='footer-container'>
+  <%= link_to root_path, class: "homepage-icon" do %>
+    <i class="fa-solid fa-house" style='color:#35B5FF; font-size: 30px;'></i>
+  <% end %>
+  <%= link_to favorites_path, class: "homepage-icon" do %>
+    <i class="fa-solid fa-heart" style='color:lightgrey; font-size: 30px;'></i>
+  <% end %>
+  <%= link_to bookmarks_path, class: "homepage-icon" do %>
+    <i class="fa-solid fa-bookmark" style='color:lightgrey; font-size: 30px;'></i>
+  <% end %>
+  <%= link_to profile_path, class: "homepage-icon" do %>
+    <i class="fa-solid fa-user" style='color:lightgrey; font-size: 30px;'></i>
+  <% end %>
+</div>
 <% elsif controller_name == 'spots' && action_name == 'favorites' %>
   <div class='footer-container'>
     <%= link_to root_path, class: "homepage-icon" do %>
-      <i class="fa-solid fa-house" style='color:lightgrey'></i>
+      <i class="fa-solid fa-house" style='color:lightgrey; font-size: 30px;'></i>
     <% end %>
     <%= link_to favorites_path, class: "homepage-icon" do %>
-      <i class="fa-solid fa-heart" style='color:#35B5FF'></i>
+      <i class="fa-solid fa-heart" style='color:#35B5FF; font-size: 30px;'></i>
     <% end %>
     <%= link_to bookmarks_path, class: "homepage-icon" do %>
-      <i class="fa-solid fa-bookmark" style='color:lightgrey'></i>
+      <i class="fa-solid fa-bookmark" style='color:lightgrey; font-size: 30px'></i>
     <% end %>
     <%= link_to profile_path, class: "homepage-icon" do %>
-      <i class="fa-solid fa-user" style='color:lightgrey'></i>
+      <i class="fa-solid fa-user" style='color:lightgrey; font-size: 30px;'></i>
     <% end %>
   </div>
 <% elsif controller_name == 'spots' && action_name == 'bookmark'%>
   <div class='footer-container'>
     <%= link_to root_path, class: "homepage-icon" do %>
-      <i class="fa-solid fa-house" style='color:lightgrey'></i>
+      <i class="fa-solid fa-house" style='color:lightgrey; font-size: 30px;'></i>
     <% end %>
     <%= link_to favorites_path, class: "homepage-icon" do %>
-      <i class="fa-solid fa-heart" style='color:lightgrey'></i>
+      <i class="fa-solid fa-heart" style='color:lightgrey; font-size: 30px;'></i>
     <% end %>
     <%= link_to bookmarks_path, class: "homepage-icon" do %>
-      <i class="fa-solid fa-bookmark" style='color:#35B5FF'></i>
+      <i class="fa-solid fa-bookmark" style='color:#35B5FF; font-size: 30px'></i>
+
     <% end %>
     <%= link_to profile_path, class: "homepage-icon" do %>
-      <i class="fa-solid fa-user" style='color:lightgrey'></i>
+      <i class="fa-solid fa-user" style='color:lightgrey; font-size: 30px;'></i>
     <% end %>
   </div>
 <% else controller_name == 'pages' && action_name == 'profile' %>
   <div class='footer-container'>
     <%= link_to root_path, class: "homepage-icon" do %>
-      <i class="fa-solid fa-house" style='color:lightgrey'></i>
+      <i class="fa-solid fa-house" style='color:lightgrey; font-size: 30px;'></i>
     <% end %>
     <%= link_to favorites_path, class: "homepage-icon" do %>
-      <i class="fa-solid fa-heart" style='color:lightgrey'></i>
+      <i class="fa-solid fa-heart" style='color:lightgrey; font-size: 30px;'></i>
     <% end %>
     <%= link_to bookmarks_path, class: "homepage-icon" do %>
-      <i class="fa-solid fa-bookmark" style='color:lightgrey'></i>
+      <i class="fa-solid fa-bookmark" style='color:lightgrey; font-size: 30px'></i>
     <% end %>
     <%= link_to profile_path, class: "homepage-icon" do %>
-      <i class="fa-solid fa-user" style='color:#35B5FF'></i>
+      <i class="fa-solid fa-user" style='color:#35B5FF; font-size: 30px;'></i>
     <% end %>
   </div>
 <% end %>
