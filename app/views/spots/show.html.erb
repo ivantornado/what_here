@@ -1,11 +1,13 @@
 <div class="card-trip" style="position: relative;">
   <%= image_tag  @spot.photo %>
-  <%# <% if @spot == bookmarked %>
-    <%# <i class="fa-solid fa-bookmark" style="position: absolute; top: 15px; right: 15px; color: white; font-size: 35px;"></i> %>
-  <%# <% else %>
-    <i class="fa-regular fa-bookmark" style="position: absolute; top: 15px; right: 15px; color: white; font-size: 35px;"></i>
-  <%# <% end %>
-  <i class="fa-solid fa-chevron-left" style="position: absolute; top: 15px; left: 15px; color: white; font-size: 35px;"></i>
+  <% if @spot.favorited_by?(current_user) %>
+    <i class="fa-solid fa-bookmark" style="position: absolute; top: 15px; right: 15px; color: white; font-size: 35px;"></i>
+  <% else %>
+    <i class="fa-regular fa-bookmark" style="position: absolute; top: 15px; right: 15px; color: white; font-size: 35px;" ></i>
+  <% end %>
+  <%= link_to :back do %>
+    <i class="fa-solid fa-chevron-left" style="position: absolute; top: 15px; left: 15px; color: white; font-size: 35px;"></i>
+    <% end %>
   <h2 class="card-trip-pricing" style="position: absolute; top: 437px; right: 10px; color: white; font-size: 22px;"><%= @spot.rating %>⭐️</h2>
   <div class="card-trip-infos">
     <div>
@@ -16,9 +18,10 @@
 
       <div class="button-container">
         <%= link_to 'Add to Liked', toggle_favorite_spot_path(@spot), data:{turbo_method: :post}, class:"btn-black text-decoration-none button button-wide" %>
-        <%= link_to toggle_favorite_spot_path(@spot), data: { turbo_method: :post }, class: "btn-small2 text-decoration-none button button-narrow" do %>
-            <i class="fa-solid fa-bookmark fa-2x" style="line-height: 1.7; font-size: 24px;"></i>
-            <% @spot.favorited[0].bookmarked = true %>
+        <%= link_to spot_path(@spot), data: { turbo_method: :patch }, id:"bookmark-button" do %>
+            <div class= "btn-small2 text-decoration-none button button-narrow" >
+              <i class="fa-solid fa-bookmark fa-2x" style="line-height: 1.7; font-size: 24px;"></i>
+            </div>
         <% end %>
       </div>
 
@@ -26,12 +29,12 @@
   </div>
 </div>
 
-<%# javascript %>
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const chevronLeft = document.querySelector('.fa-chevron-left');
-    chevronLeft.addEventListener('click', () => {
-      window.history.back();
-    });
+  const bookmarkButton = document.querySelector('#bookmark-button');
+  const bookmarkIcon = bookmarkButton.querySelector('.fa-bookmark');
+  bookmarkButton.addEventListener('click', function() {
+    bookmarkIcon.classList.toggle('fa-solid');
+    bookmarkIcon.classList.toggle('fa-regular');
+    window.location.reload();
   });
 </script>
