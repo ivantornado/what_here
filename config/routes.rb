@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :spots, only: %i[index show] do
     member do
       post 'toggle_favorite', to: "spots#toggle_favorite"
+      post 'dislike', to: "spots#dislike"
     end
   end
 
