@@ -1,14 +1,14 @@
 <div style="position:relative">
-    <% @spots.each do |spot| %>
-      <% next if current_user.favorites.map { |favorite| favorite.favoritable_id }.include?(spot.id) %>
-        <%= link_to spot_path(spot.id), style:"text-decoration:none; color:black;" do %>
-          <div class="card" style="position:absolute">
-              <h1><%= spot.name %></h1>
-              <div>
-                <%= image_tag  spot.photo %>
-              </div>
-              <%= link_to 'like', toggle_favorite_spot_path(spot),remote: true, data:{turbo_method: :post} %>
-          </div>
-        <% end %>
-    <% end %>
+  <% @spots.each do |spot| %>
+    <% next if current_user.favorites.map { |favorite| favorite.favoritable_id }.include?(spot.id) %>
+      <%= link_to spot_path(spot.id), style:"text-decoration:none; color:black;" do %>
+        <div class="card-index" style="position:absolute; background-image: url('<%= spot.photo %>'); background-size: cover;">
+            <h1><%= spot.name %></h1>
+            <%= link_to toggle_favorite_spot_path(spot), remote: true, data: { turbo_method: :post }, style: "position: absolute; bottom: 27px; right: 86px;" do %>
+              <i class="fa-brands fa-gratipay" style="color: #38b4ff; font-size: 62px;"></i>
+            <% end %>
+            <i class="fa-solid fa-circle-xmark" style="position: absolute; color: #e61e1e; bottom: 27px; left: 86px; font-size: 62px;"></i>
+        </div>
+      <% end %>
+  <% end %>
 </div>
