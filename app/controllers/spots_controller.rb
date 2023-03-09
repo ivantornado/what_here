@@ -19,6 +19,13 @@ class SpotsController < ApplicationController
     @favorites = current_user.all_favorites
   end
 
+  def dislike
+    @spot = Spot.find_by(id: params[:id])
+    @spot.destroy
+    redirect_to spots_path
+  end
+
+
   def bookmarks
     @favorites = current_user.all_favorites
   end
