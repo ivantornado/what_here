@@ -12,11 +12,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :bookmarks, only: %i[index show]
-
   get '/profile', to: 'pages#profile'
   get '/favorites', to: 'spots#favorites'
-  get '/test', to: 'pages#test'
-
-
+  get '/bookmarks', to: 'spots#bookmarks'
 end

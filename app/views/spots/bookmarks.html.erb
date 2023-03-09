@@ -1,0 +1,9 @@
+<h2>Your Bookmarked Spots</h2>
+<% @favorites.each do |favorite| %>
+  <% next if favorite.bookmarked = false %>
+  <div class="fav-card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%= asset_path(favorite.favoritable.photo) %>)">
+    <%= link_to spot_path(favorite.favoritable_id), style:"text-decoration:none; color:white;" do %>
+      <p><%= favorite.favoritable.name %></p>
+    <% end %>
+  </div>
+<% end %>
