@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  patch 'spots/:id', to: "spots#update"
 
   resources :spots, only: %i[index show] do
     member do

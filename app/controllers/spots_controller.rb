@@ -9,25 +9,31 @@ class SpotsController < ApplicationController
     @spot = Spot.find(params[:id])
   end
 
-  def toggle_favorite
-    @spot = Spot.find_by(id: params[:id])
-    current_user.favorited?(@spot) ? current_user.unfavorite(@spot) : current_user.favorite(@spot)
-    redirect_to spots_path
-  end
-
   def favorites
     @favorites = current_user.all_favorites
   end
 
+  def toggle_favorite
+    @spot = Spot.find(params[:id])
+    current_user.favorited?(@spot) ? current_user.unfavorite(@spot) : current_user.favorite(@spot)
+    redirect_to spots_path
+  end
+
   def dislike
-    @spot = Spot.find_by(id: params[:id])
+    @spot = Spot.find(params[:id])
     @spot.destroy
     redirect_to spots_path
   end
 
-
   def bookmarks
     @favorites = current_user.all_favorites
+  end
+
+  def update
+    @spot = Spot.find(params[:id])
+    @favorite = current_user.favorites.find_by(favoritable_id: @spot.id)
+    @favorite.bookmarked = !@favorite.bookmarked
+    @favorite.save
   end
 
   private
