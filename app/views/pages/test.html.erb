@@ -1,10 +1,8 @@
+<h1>TEST PAGE</h1>
+
 <div class="card-trip" style="position: relative;">
   <%= image_tag  @spot.photo %>
-  <%# <% if @spot == bookmarked %>
-    <%# <i class="fa-solid fa-bookmark" style="position: absolute; top: 15px; right: 15px; color: white; font-size: 35px;"></i> %>
-  <%# <% else %>
     <i class="fa-regular fa-bookmark" style="position: absolute; top: 15px; right: 15px; color: white; font-size: 35px;"></i>
-  <%# <% end %>
   <i class="fa-solid fa-chevron-left" style="position: absolute; top: 15px; left: 15px; color: white; font-size: 35px;"></i>
   <h2 class="card-trip-pricing" style="position: absolute; top: 437px; right: 10px; color: white; font-size: 22px;"><%= @spot.rating %>⭐️</h2>
   <div class="card-trip-infos">
@@ -24,15 +22,3 @@
     </div>
   </div>
 </div>
-
-<%# <%= </pe> <i class="fa-solid fa-bookmark"></i>%>
-
-<%# javascript %>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const chevronLeft = document.querySelector('.fa-chevron-left');
-    chevronLeft.addEventListener('click', () => {
-      window.history.back();
-    });
-  });
-</script>
