@@ -78,3 +78,26 @@
   background: #000000;
   color: white;
 }
+
+
+// --------button container in the show page
+
+.button-container {
+  position: absolute; /* Position the button container absolutely within the card */
+  bottom: 20px; /* Position it 20px from the bottom */
+  left: 0; /* Align it to the left edge */
+  width: 100%; /* Make it span the entire width of the card */
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+.button-wide {
+  flex-basis: 80%;
+}
+
+.button-narrow {
+  flex-basis: 20%;
+  margin-left: 5px;
+}

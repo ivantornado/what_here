@@ -18,10 +18,13 @@
 
 
 .card-trip {
+  position: relative; 
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   height: 698px;
+  width: 374px;
+
 }
 
 .card-trip > img {
@@ -133,5 +136,3 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
-
-
