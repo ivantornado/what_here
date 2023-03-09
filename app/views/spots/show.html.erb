@@ -18,14 +18,13 @@
         <%= link_to 'Add to Liked', toggle_favorite_spot_path(@spot), data:{turbo_method: :post}, class:"btn-black text-decoration-none button button-wide" %>
         <%= link_to toggle_favorite_spot_path(@spot), data: { turbo_method: :post }, class: "btn-small2 text-decoration-none button button-narrow" do %>
             <i class="fa-solid fa-bookmark fa-2x" style="line-height: 1.7;"></i>
+            <% @spot.favorited[0].bookmarked = true %>
         <% end %>
       </div>
 
     </div>
   </div>
 </div>
-
-<%# <%= </pe> <i class="fa-solid fa-bookmark"></i>%>
 
 <%# javascript %>
 <script>

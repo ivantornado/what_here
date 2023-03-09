@@ -19,6 +19,10 @@ class SpotsController < ApplicationController
     @favorites = current_user.all_favorites
   end
 
+  def bookmarks
+    @favorites = current_user.all_favorites
+  end
+
   private
 
   def spot_params
