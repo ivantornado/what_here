@@ -3,31 +3,46 @@
 
 <div class="d-flex justify-content-center flex-column align-items-center">
   <div class="avatar-big">
-    <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", style: "width:110px", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false%>
-    <p><%= current_user.email %></p>
+    <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", style: "width:130px", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false%>
+    <p id="profile-name"> Steve Irwin </p>
+    <p class='profile-data'>📍Lisbon</p>
   </div>
+  <div style='padding-bottom: 24px'>
+    <span class='profile-box'><p>Change Picture</p><i class="fa-solid fa-pen"></i></span>
+    <span class='profile-box'><p>Change Username</p><i class="fa-solid fa-pen"></i></span>
+    <span class='profile-box'><p>Change Hub</p><i class="fa-solid fa-pen"></i></span>
+  <div>
+</div>
+</div>
   <div id = "container">
+    <div class="row" id="second">
+      <div class="col">
+      </div >
+      <p>Choose your preferred categories:</p>
+    </div>
     <div class="row">
       <div class="col">
         <button type = "button" id = "b1" class = "small_btn">Restaurants</button>
       </div>
       <div class="col">
-        <button type = "button" id = "b1" class = "small_btn">Bars</button>
+        <button type = "button" id = "b2" class = "small_btn">Monuments</button>
       </div>
       <div class="col">
-        <button type = "button" id = "b1" class = "small_btn">Monuments</button>
+        <button type = "button" id = "b3" class = "small_btn">Bars</button>
       </div>
       <div class="col">
-        <button type = "button" id = "b1" class = "small_btn">Restaurants</button>
+        <button type = "button" id = "b4" class = "small_btn">Sightseeing</button>
       </div>
       <div class="col">
-        <button type = "button" id = "b1" class = "small_btn">Restaurants</button>
+        <button type = "button" id = "b5" class = "small_btn">Beach</button>
+      </div>
+      <div class="col">
+        <button type = "button" id = "b6" class = "small_btn">Nightclub</button>
+      </div>
+      <div class="col">
+        <button type = "button" id = "b7" class = "small_btn">Garden</button>
       </div>
     </div>
-    <div class="row" id="second">
-      <div class="col">
-      </div>
-      <p>Choose your prefered categories</p>
-    </div>
+    <%= link_to "Log out", destroy_user_session_path, class:"btn-black text-decoration-none", data: {turbo_method: :delete} %>
   </div>
 </div>

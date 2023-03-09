@@ -18,7 +18,7 @@
 
 
 .card-trip {
-  position: relative; 
+  position: relative;
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -66,8 +66,10 @@
   position: relative;
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
   height: 698px;
+  width: 373px;
+  border-radius: 11px;
 }
 
 .card-index > img {
@@ -76,10 +78,15 @@
   object-fit: cover;
 }
 
-.card-index h2 {
-  font-size: 16px;
+.card-index h1 {
+  position: absolute;
+  bottom: 111px;
+  font-size: 23px;
   font-weight: bold;
   margin: 0;
+  color: white;
+  size: 30px;
+  padding-left: 11px;
 }
 
 .card-index p {
@@ -125,7 +132,8 @@
 .fav-card {
   background-size: cover;
   background-position: center;
-  height: 180px;
+  margin-top: 10px;
+  height: 148px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,5 +142,5 @@
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 11px rgba(0,0,0,0.2);
 }
