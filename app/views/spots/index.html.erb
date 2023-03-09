@@ -1,14 +1,14 @@
-<div class="card-index">
+<div style="position:relative">
     <% @spots.each do |spot| %>
-      <div class="card" style="position:absolute">
-        <% next if current_user.favorites.each { |favorite| favorite.favoritable_id == spot.id}.any? %>
+      <% next if current_user.favorites.map { |favorite| favorite.favoritable_id }.include?(spot.id) %>
         <%= link_to spot_path(spot.id), style:"text-decoration:none; color:black;" do %>
-          <h1><%= spot.name %></h1>
-          <div>
-            <%= image_tag  spot.photo %>
+          <div class="card" style="position:absolute">
+              <h1><%= spot.name %></h1>
+              <div>
+                <%= image_tag  spot.photo %>
+              </div>
+              <%= link_to 'like', toggle_favorite_spot_path(spot),remote: true, data:{turbo_method: :post} %>
           </div>
-          <%= link_to 'like', toggle_favorite_spot_path(spot), data:{turbo_method: :post} %>
         <% end %>
-      </div>
     <% end %>
 </div>
