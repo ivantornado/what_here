@@ -1,16 +1,16 @@
-<div style="position:relative">
+<div style="position:relative, height: 100%">
   <% @spots.each do |spot| %>
     <% next if current_user.favorites.map { |favorite| favorite.favoritable.name }.include?(spot.name) %>
-      <%= link_to spot_path(spot.id), style:"text-decoration:none; color:black;" do %>
+      <%= link_to spot_path(spot.id), style:"text-decoration:none" do %>
         <div class="card-index" style="position:absolute; background-image: url('<%= spot.photo %>'); background-size: cover;">
             <h1><%= spot.name %></h1>
-            <%= link_to toggle_favorite_spot_path(spot), data: { turbo_method: :post }, style: "position: absolute; bottom: 27px; right: 86px;" do %>
-              <i class="fa-brands fa-gratipay" style="color: #38b4ff; font-size: 62px;"></i>
-            <% end %>
-            <%= link_to dislike_spot_path(spot), data: { turbo_method: :post }, style: "position: absolute; bottom: 27px; left: 86px;" do %>
-              <i class="fa-solid fa-circle-xmark" style="color: #e61e1e; font-size: 62px;"></i>
-            <% end %>
         </div>
+      <% end %>
+      <%= link_to toggle_favorite_spot_path(spot), data: { turbo_method: :post }, style: "position: absolute; bottom: 138px; right: 86px;" do %>
+        <i class="fa-brands fa-gratipay" style="color: #38b4ff; font-size: 62px;"></i>
+      <% end %>
+      <%= link_to dislike_spot_path(spot), data: { turbo_method: :post }, style: "position: absolute; bottom: 138px; left: 86px;" do %>
+        <i class="fa-solid fa-circle-xmark" style="color: #e61e1e; font-size: 62px;"></i>
       <% end %>
   <% end %>
 </div>
@@ -19,4 +19,6 @@
 <h3>SURPIRSE</h3>
 <h3>you've reached the end</h3>
 
-<h3>you motherfucker</h3>
+<h3>you love swiping on our app no?</h3>
+
+<h3>Yes, its great. We agree.</h3>
