@@ -17,7 +17,7 @@
       <br>
 
       <div class="button-container">
-        <% if @spot.favorited %>
+        <% if current_user.favorites.find_by(favoritable_id: @spot.id) %>
           <%= link_to 'Remove from Liked', toggle_favorite_spot_path(@spot), data:{turbo_method: :post}, class:"btn-black text-decoration-none button button-wide" %>
           <%= link_to spot_path(@spot), data: { turbo_method: :patch }, id:"bookmark-button" do %>
               <div class= "btn-small2 text-decoration-none button button-narrow" >
@@ -25,7 +25,7 @@
               </div>
           <% end %>
         <% else %>
-          <%= link_to 'Add to Liked', toggle_favorite_spot_path(@spot), data:{turbo_method: :post}, class:"btn-black text-decoration-none button button-wide" %>
+          <%= link_to 'Add to Liked', toggle_favorite_spot_path(@spot), data:{turbo_method: :post}, class:"btn-blue text-decoration-none" %>
         <% end %>
       </div>
 
@@ -33,7 +33,7 @@
   </div>
 </div>
 
-<script>
+<%# <script>
   const bookmarkButton = document.querySelector('#bookmark-button');
   const bookmarkIcon = bookmarkButton.querySelector('.fa-bookmark');
   bookmarkButton.addEventListener('click', function() {
@@ -41,4 +41,4 @@
     bookmarkIcon.classList.toggle('fa-regular');
     window.location.reload();
   });
-</script>
+</script> %>
