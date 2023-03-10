@@ -1,6 +1,6 @@
 <div class="card-trip" style="position: relative;">
   <%= image_tag  @spot.photo %>
-  <% if @spot.favorited_by?(current_user) %>
+  <% if current_user.favorite(@spot).bookmarked %>
     <i class="fa-solid fa-bookmark" style="position: absolute; top: 15px; right: 15px; color: white; font-size: 35px;"></i>
   <% else %>
     <i class="fa-regular fa-bookmark" style="position: absolute; top: 15px; right: 15px; color: white; font-size: 35px;" ></i>
@@ -19,10 +19,10 @@
       <div class="button-container">
         <% if current_user.favorites.find_by(favoritable_id: @spot.id) %>
           <%= link_to 'Remove from Liked', toggle_favorite_spot_path(@spot), data:{turbo_method: :post}, class:"btn-black text-decoration-none button button-wide" %>
-          <%= link_to spot_path(@spot), data: { turbo_method: :patch }, id:"bookmark-button" do %>
-              <div class= "btn-small2 text-decoration-none button button-narrow" >
-                <i class="fa-solid fa-bookmark fa-2x" style="padding-top: 13px; font-size: 28px;"></i>
-              </div>
+          <%= link_to spot_path(@spot), data: { turbo_method: :patch }, id: "bookmark-button", onclick: "reloadPage()" do %>
+            <div class= "btn-small2 text-decoration-none button button-narrow" >
+              <i class="fa-solid fa-bookmark fa-2x" style="padding-top: 13px; font-size: 28px;"></i>
+            </div>
           <% end %>
         <% else %>
           <%= link_to 'Add to Liked', toggle_favorite_spot_path(@spot), data:{turbo_method: :post}, class:"btn-blue text-decoration-none" %>
@@ -33,12 +33,9 @@
   </div>
 </div>
 
-<%# <script>
-  const bookmarkButton = document.querySelector('#bookmark-button');
-  const bookmarkIcon = bookmarkButton.querySelector('.fa-bookmark');
-  bookmarkButton.addEventListener('click', function() {
-    bookmarkIcon.classList.toggle('fa-solid');
-    bookmarkIcon.classList.toggle('fa-regular');
-    window.location.reload();
-  });
-</script> %>
+
+<script>
+  function reloadPage() {
+    location.reload();
+  }
+</script>
