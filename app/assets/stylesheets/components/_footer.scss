@@ -5,7 +5,9 @@
   align-content: center;
   grid-template-columns: repeat(4, 100px);
   position: sticky;
-  bottom: 0vh;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .homepage-icon {
