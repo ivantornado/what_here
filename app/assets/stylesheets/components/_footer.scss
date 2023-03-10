@@ -4,8 +4,10 @@
   justify-content: center;
   align-content: center;
   grid-template-columns: repeat(4, 100px);
-  position: sticky;
+  position: fixed;
   bottom: 0vh;
+  background-color: white;
+  width: 100%;
 }
 
 .homepage-icon {
