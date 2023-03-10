@@ -4,9 +4,9 @@
   justify-content: center;
   align-content: center;
   grid-template-columns: repeat(4, 100px);
-  position: sticky;
-  bottom: 0;
-  left: 0;
+  position: fixed;
+  bottom: 0vh;
+  background-color: white;
   width: 100%;
 }
 
