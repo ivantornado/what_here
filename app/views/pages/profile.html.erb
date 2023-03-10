@@ -3,14 +3,16 @@
 
 <div class="d-flex justify-content-center flex-column align-items-center">
   <div class="avatar-big">
-    <%= cl_image_tag current_user.photo.key, :transformation=>[
-  {:aspect_ratio=>"1.0", :gravity=>"face", :width=>0.2, :zoom=>0.2, :crop=>"thumb"},{:radius=>"max"}] %>
+    <% if current_user.photo.present? %>
+      <%= cl_image_tag current_user.photo.key, :transformation=>[{:aspect_ratio=>"1.0", :gravity=>"face", :width=>0.2, :zoom=>0.2, :crop=>"thumb"},{:radius=>"max"}] %>
+    <% else %>
+      <img src="assets/default_pic.png" width="0.4">
+    <% end %>
     <p id="profile-name"> Steve Irwin </p>
     <p class='profile-data'>📍Lisbon</p>
   </div>
   <div style='padding-bottom: 24px'>
     <div class='profile-box'><p><%= link_to "Change Photo", user_registration_path, class:"text-decoration-none", data: {turbo_method: :patch}, style: "color: black" %></p>
-
     </div>
     <span class='profile-box'><p>Change Username</p></span>
     <span class='profile-box'><p>Change Hub</p></span>
