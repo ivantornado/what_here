@@ -52,21 +52,21 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_13_153206) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "bookmarked", default: false
+    t.bigint "folder_id"
     t.index ["blocked"], name: "index_favorites_on_blocked"
     t.index ["favoritable_id", "favoritable_type"], name: "fk_favoritables"
     t.index ["favoritable_type", "favoritable_id", "favoritor_type", "favoritor_id", "scope"], name: "uniq_favorites__and_favoritables", unique: true
     t.index ["favoritable_type", "favoritable_id"], name: "index_favorites_on_favoritable"
     t.index ["favoritor_id", "favoritor_type"], name: "fk_favorites"
     t.index ["favoritor_type", "favoritor_id"], name: "index_favorites_on_favoritor"
+    t.index ["folder_id"], name: "index_favorites_on_folder_id"
     t.index ["scope"], name: "index_favorites_on_scope"
   end
 
   create_table "folders", force: :cascade do |t|
-    t.bigint "favorites_id", null: false
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["favorites_id"], name: "index_folders_on_favorites_id"
   end
 
   create_table "spots", force: :cascade do |t|
@@ -98,5 +98,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_13_153206) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "folders", "favorites", column: "favorites_id"
+  add_foreign_key "favorites", "folders"
 end

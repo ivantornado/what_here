@@ -1,3 +1,3 @@
 class Folder < ApplicationRecord
-  belongs_to :favorites
+  has_many :favorites
 end
