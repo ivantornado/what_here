@@ -8,5 +8,6 @@ class PagesController < ApplicationController
   end
 
   def profile
+    current_user.update(location: params[:query])
   end
 end

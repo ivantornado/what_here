@@ -9,6 +9,7 @@ Spot.destroy_all
 
 @client = GooglePlaces::Client.new(ENV.fetch('API_KEY'))
 @places = @client.spots(38.725119, -9.150248, radius: 500, types: ['point_of_interest'])
+# @places = @client.spots_by_query(search, types: selected, exclude: unselected)
 @places.each do |place|
   next if place.photos.empty?
 
