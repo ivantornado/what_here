@@ -5,14 +5,16 @@
     <% else %>
       <img src="assets/default_pic.png" width="0.4">
     <% end %>
-    <p id="profile-name"> Steve Irwin </p>
-    <p class='profile-data'>📍Lisbon</p>
+    <p id="profile-name"> <%= current_user.email %> </p>
+    <p class='profile-data'>
+    </p>
   </div>
   <div style='padding-bottom: 24px'>
-    <div class='profile-box'><p><%= link_to "Change Photo", user_registration_path, class:"text-decoration-none", data: {turbo_method: :patch}, style: "color: black" %></p>
-    </div>
-    <span class='profile-box'><p>Change Username</p></span>
-    <span class='profile-box'><p>Change Hub</p></span>
+    <%= simple_form_for current_user do |f| %>
+      <%= f.input :location %>
+      <%= f.input :radius, as: :range, step: 10, min: 100, max: 1000 %>
+      <%= f.button :submit %>
+    <% end %>
   <div>
 </div>
 </div>
@@ -44,6 +46,9 @@
       <div class="col">
         <button type = "button" id = "b7" class = "small_btn">Garden</button>
       </div>
+    </div>
+    <div class='profile-box'>
+      <p><%= link_to "Edit Profile", user_registration_path, class:"text-decoration-none", data: {turbo_method: :patch}, style: "color: black" %></p>
     </div>
     <%= link_to "Log out", destroy_user_session_path, class:"btn-black-profile text-decoration-none", data: {turbo_method: :delete} %>
   </div>

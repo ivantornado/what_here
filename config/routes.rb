@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :users, only: :update
+
   get '/profile', to: 'pages#profile'
   get '/favorites', to: 'spots#favorites'
   get '/bookmarks', to: 'spots#bookmarks'
