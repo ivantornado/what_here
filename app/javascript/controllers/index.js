@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import BtnChangeController from "./btn_change_controller"
+application.register("btn-change", BtnChangeController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 

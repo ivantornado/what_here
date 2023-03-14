@@ -2,9 +2,15 @@ h1 {
   text-align: center;
 }
 #main-content {
-  background-color: #ffffff;
+  background-color: #ffffff41;
   max-height: 100vh;
-  padding: 20px;
+  padding-left:20px;
+  padding-right: 20px;
+}
+
+#logged-out {
+  background-color: #ffffff40;
+  max-height: 100vh;
 }
 
 #main-content > img {
@@ -67,13 +73,13 @@ h1 {
   cursor: pointer;
 }
 
-#b1, #b2, #b7{
+.active {
   background-color: #36b5fe;
   box-shadow: none;
   border: black;
 }
 
-#b3, #b4, #b5, #b6{
+.btn-category{
   background-color: rgba(128, 128, 128, 0.643);
   box-shadow: none;
   border: black;

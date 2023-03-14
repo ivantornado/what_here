@@ -12,13 +12,13 @@
   <div style='padding-bottom: 24px'>
     <%= simple_form_for current_user do |f| %>
       <%= f.input :location %>
-      <%= f.input :radius, as: :range, step: 10, min: 100, max: 1000 %>
+      <%= f.range_field :radius, step: 10, min: 100, max: 1000 %>
       <%= f.button :submit %>
     <% end %>
   <div>
 </div>
 </div>
-  <div id = "container">
+  <div id = "container" data-controller="btn-change" >
     <div class="row" id="second">
       <div class="col">
       </div >
@@ -26,25 +26,25 @@
     </div>
     <div class="row">
       <div class="col">
-        <button type = "button" id = "b1" class = "small_btn">Restaurants</button>
+        <button type = "button" class = "small_btn btn-category" data-btn-change-target="button1" data-action="click->btn-change#colorChange" >Restaurants</button>
       </div>
       <div class="col">
-        <button type = "button" id = "b2" class = "small_btn">Monuments</button>
+        <button type = "button" class = "small_btn btn-category" data-btn-change-target="button2" data-action="click->btn-change#colorChange">Monuments</button>
       </div>
       <div class="col">
-        <button type = "button" id = "b3" class = "small_btn">Bars</button>
+        <button type = "button" class = "small_btn btn-category" data-btn-change-target="button3" data-action="click->btn-change#colorChange">Bars</button>
       </div>
       <div class="col">
-        <button type = "button" id = "b4" class = "small_btn">Sightseeing</button>
+        <button type = "button" class = "small_btn btn-category" data-btn-change-target="button4" data-action="click->btn-change#colorChange">Sightseeing</button>
       </div>
       <div class="col">
-        <button type = "button" id = "b5" class = "small_btn">Beach</button>
+        <button type = "button" class = "small_btn btn-category" data-btn-change-target="button5" data-action="click->btn-change#colorChange">Beach</button>
       </div>
       <div class="col">
-        <button type = "button" id = "b6" class = "small_btn">Nightclub</button>
+        <button type = "button" class = "small_btn btn-category" data-btn-change-target="button6" data-action="click->btn-change#colorChange">Nightclub</button>
       </div>
       <div class="col">
-        <button type = "button" id = "b7" class = "small_btn">Garden</button>
+        <button type = "button" class = "small_btn btn-category" data-btn-change-target="button7" data-action="click->btn-change#colorChange">Garden</button>
       </div>
     </div>
     <div class='profile-box'>

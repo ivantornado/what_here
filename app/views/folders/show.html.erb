@@ -1,6 +1,11 @@
-<div style="margin-bottom:30px">
+<div style="padding-bottom:98px">
+
   <h2>Your <%= @folder.name %> Spots</h2>
-  <% @favorites.each do |favorite| %>
-    <%= favorite.favoritable.name %>
+  <% @spots.each do |spot| %>
+    <div class="fav-card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%= asset_path(spot.photo) %>)">
+      <%= link_to spot_path(spot.id), style:"text-decoration:none; color:white;" do %>
+        <p><%= spot.name %></p>
+      <% end %>
+    </div>
   <% end %>
 </div>
