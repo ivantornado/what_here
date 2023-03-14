@@ -6,7 +6,7 @@ class FoldersController < ApplicationController
   end
 
   def show
-    @favorites = current_user.all_favorites.where(folder: @folder)
+    @spots = @folder.spots
   end
 
   def new
