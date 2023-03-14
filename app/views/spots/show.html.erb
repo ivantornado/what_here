@@ -11,6 +11,10 @@
   <h2 class="card-trip-pricing" style="position: absolute; top: 438px; right: 10px; color: white; font-size: 22px;"><%= @spot.rating %>⭐️</h2>
   <div class="card-trip-infos">
     <div>
+      <%= simple_form_for @favorite do |f| %>
+        <%= f.association :folder %>
+        <%= f.submit %>
+      <% end %>
       <h3><%= @spot.name %></h3>
       <p><i class="fa-solid fa-location-dot" style="color:#0074b7"></i> <%= @spot.spot_location %></p>
       <p><i class="fa-sharp fa-solid fa-info" style="color:#0074b7"></i><%= @spot.description %></p>
@@ -18,16 +22,14 @@
 
       <div class="button-container">
         <% if current_user.favorites.find_by(favoritable_id: @spot.id) %>
-          <%= link_to 'Remove from Liked', toggle_favorite_spot_path(@spot), data:{turbo_method: :post}, class:"btn-black text-decoration-none button button-wide", onclick: "reloadPage()" %>
-          <%= link_to spot_path(@spot), data: { turbo_method: :patch }, id: "bookmark-button", onclick: "reloadPage()" do %>
-            <div class= "btn-small2 text-decoration-none button button-narrow" >
-              <i class="fa-solid fa-bookmark fa-2x" style="padding-top: 13px; font-size: 28px;"></i>
-            </div>
-          <% end %>
+
+          <%= link_to 'Remove from Liked', toggle_favorite_spot_path(@spot), data:{turbo_method: :post}, class:"btn-black text-decoration-none button button-wide" %>
+
         <% else %>
           <%= link_to 'Add to Liked', toggle_favorite_spot_path(@spot), data:{turbo_method: :post}, class:"btn-blue text-decoration-none" %>
         <% end %>
       </div>
+
 
     </div>
   </div>

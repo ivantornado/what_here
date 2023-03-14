@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :favorites
-  has_many :bookmarks
+  has_many :folders
   acts_as_favoritor
 
   has_one_attached :photo

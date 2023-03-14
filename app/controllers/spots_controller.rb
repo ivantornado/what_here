@@ -24,6 +24,7 @@ class SpotsController < ApplicationController
 
   def show
     @spot = Spot.find(params[:id])
+    @favorite = current_user.all_favorites.find_by(favoritable: @spot)
   end
 
   def favorites
@@ -54,7 +55,7 @@ class SpotsController < ApplicationController
   def update
     @spot = Spot.find(params[:id])
     @favorite = current_user.favorites.find_by(favoritable_id: @spot.id)
-    @favorite.bookmarked = !@favorite.bookmarked
+    @favorite.update(favorite_params)
     @favorite.save
   end
 
@@ -63,4 +64,5 @@ class SpotsController < ApplicationController
   def spot_params
     params.require(:spot).permit(:id, :name, :description, :price, :category, :tag, photos: [])
   end
+
 end
