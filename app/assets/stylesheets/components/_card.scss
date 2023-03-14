@@ -6,6 +6,13 @@
   background-color: white .8;
 }
 
+.card-likes {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
 
 // }
 .show_card {
@@ -169,6 +176,7 @@
 }
 
 
+
 .folder-card {
   background-size: cover;
   background-position: center;
@@ -184,3 +192,4 @@
   border-radius: 5px;
   box-shadow: 0 0 11px rgba(0,0,0,0.2);
 }
+
