@@ -1,8 +1,25 @@
+require 'uri'
+
 class SpotsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show toggle_favorite]
 
   def index
     @spots = Spot.all
+    # @client = GooglePlaces::Client.new(ENV.fetch('API_KEY'))
+    # @places = @client.spots_by_query(current_user.location, radius: 500)
+    # @places.each do |place|
+    #   next if place.photos.empty?
+
+    #   Spot.create(
+    #     name: place.name,
+    #     spot_location: place.vicinity,
+    #     latitude: place.lat,
+    #     longitude: place.lng,
+    #     description: "https://maps.googleapis.com/maps/api/place/details/",
+    #     photo: "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&maxheight=400&photo_reference=#{place.photos[0].photo_reference}&key=#{ENV.fetch('API_KEY')}",
+    #     rating: place.rating
+    #   )
+    # end
   end
 
   def show
@@ -16,8 +33,13 @@ class SpotsController < ApplicationController
 
   def toggle_favorite
     @spot = Spot.find(params[:id])
-    current_user.favorited?(@spot) ? current_user.unfavorite(@spot) : current_user.favorite(@spot)
-    redirect_to spots_path
+    if current_user.favorited?(@spot)
+      current_user.unfavorite(@spot)
+      redirect_to favorites_path
+    else
+      current_user.favorite(@spot)
+      redirect_to spots_path
+    end
   end
 
   def dislike

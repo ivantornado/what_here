@@ -218,6 +218,10 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
+    redactor-rails (0.5.0)
+      devise
+      mime-types
+      orm_adapter
     regexp_parser (2.7.0)
     reline (0.3.2)
       io-console (~> 0.5)
@@ -239,10 +243,16 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    selectize-rails (0.12.6)
     selenium-webdriver (4.8.1)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    simple_form_extension (1.5.0)
+      rails (>= 3.1)
+      redactor-rails
+      selectize-rails
+      simple_form
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -309,6 +319,7 @@ DEPENDENCIES
   sassc-rails
   selenium-webdriver
   simple_form!
+  simple_form_extension
   sprockets-rails
   stimulus-rails
   turbo-rails

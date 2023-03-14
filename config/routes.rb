@@ -16,7 +16,11 @@ Rails.application.routes.draw do
     resources :favorites, only: :index
   end
 
+
   resources :folders
+
+  resources :users, only: :update
+
 
   get '/profile', to: 'pages#profile'
   get '/favorites', to: 'spots#favorites'

@@ -22,7 +22,9 @@
 
       <div class="button-container">
         <% if current_user.favorites.find_by(favoritable_id: @spot.id) %>
+
           <%= link_to 'Remove from Liked', toggle_favorite_spot_path(@spot), data:{turbo_method: :post}, class:"btn-black text-decoration-none button button-wide" %>
+
         <% else %>
           <%= link_to 'Add to Liked', toggle_favorite_spot_path(@spot), data:{turbo_method: :post}, class:"btn-blue text-decoration-none" %>
         <% end %>
