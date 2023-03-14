@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_14_092456) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_14_155248) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -51,6 +51,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_14_092456) do
     t.index ["user_id"], name: "index_bucket_items_on_user_id"
   end
 
+  create_table "favorite_folders", force: :cascade do |t|
+    t.bigint "favorite_id", null: false
+    t.bigint "folder_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["favorite_id"], name: "index_favorite_folders_on_favorite_id"
+    t.index ["folder_id"], name: "index_favorite_folders_on_folder_id"
+  end
+
   create_table "favorites", force: :cascade do |t|
     t.string "favoritable_type", null: false
     t.bigint "favoritable_id", null: false
@@ -61,14 +70,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_14_092456) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "bookmarked", default: false
-    t.bigint "folder_id"
     t.index ["blocked"], name: "index_favorites_on_blocked"
     t.index ["favoritable_id", "favoritable_type"], name: "fk_favoritables"
     t.index ["favoritable_type", "favoritable_id", "favoritor_type", "favoritor_id", "scope"], name: "uniq_favorites__and_favoritables", unique: true
     t.index ["favoritable_type", "favoritable_id"], name: "index_favorites_on_favoritable"
     t.index ["favoritor_id", "favoritor_type"], name: "fk_favorites"
     t.index ["favoritor_type", "favoritor_id"], name: "index_favorites_on_favoritor"
-    t.index ["folder_id"], name: "index_favorites_on_folder_id"
     t.index ["scope"], name: "index_favorites_on_scope"
   end
 
@@ -122,7 +129,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_14_092456) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bucket_items", "spots"
   add_foreign_key "bucket_items", "users"
-  add_foreign_key "favorites", "folders"
   add_foreign_key "folders", "users"
   add_foreign_key "likes", "spots"
   add_foreign_key "likes", "users"

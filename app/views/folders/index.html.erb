@@ -1,12 +1,16 @@
 <div style="margin-bottom:30px">
   <h2>Your folders</h2>
   <% @folders.each do |folder| %>
-    <div class="fav-card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url()">
+    <div class="folder-card" style="position:relative; background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url()">
       <%= link_to folder_path(folder), style:"text-decoration:none; color:white;" do %>
         <p><%= folder.name %></p>
       <% end %>
-      <div> <%= link_to "X", folder_path(folder), data: { turbo_method: :delete } %> </div>
-      <div> <%= link_to "✎", edit_folder_path(folder)%> </div>
+      <%= link_to folder_path(folder), data: { turbo_method: :delete }, style: "position:absolute; top: 0px; right: 8px;" do %>
+        <i class="fa-solid fa-xmark" style="color: #38b4ff; font-size: 22px;"></i>
+      <% end %>
+      <%= link_to edit_folder_path(folder), style: "position:absolute; bottom: 0px; right: 8px;" do %>
+        <i class="fa-solid fa-pen" style="color: #38b4ff; font-size: 22px;"></i>
+      <% end %>
     </div>
   <% end %>
 
