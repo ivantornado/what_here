@@ -1,19 +1,17 @@
 <div class="card-trip" style="position: relative;">
   <%= image_tag  @spot.photo %>
-  <% if current_user.favorite(@spot).bookmarked %>
-    <i class="fa-solid fa-bookmark" style="position: absolute; top: 15px; right: 15px; color: white; font-size: 35px;"></i>
-  <% else %>
-    <i class="fa-regular fa-bookmark" style="position: absolute; top: 15px; right: 15px; color: white; font-size: 35px;" ></i>
-  <% end %>
   <%= link_to :back do %>
     <i class="fa-solid fa-chevron-left" style="position: absolute; top: 15px; left: 15px; color: white; font-size: 35px;"></i>
     <% end %>
   <h2 class="card-trip-pricing" style="position: absolute; top: 438px; right: 10px; color: white; font-size: 22px;"><%= @spot.rating %>⭐️</h2>
   <div class="card-trip-infos">
     <div>
-      <%= simple_form_for @favorite do |f| %>
-        <%= f.association :folder %>
-        <%= f.submit %>
+      <% if @favorite.present? %>
+        <%= simple_form_for @favorite_folder do |f| %>
+          <%= f.association :folder %>
+          
+          <%= f.submit %>
+        <% end %>
       <% end %>
       <h3><%= @spot.name %></h3>
       <p><i class="fa-solid fa-location-dot" style="color:#0074b7"></i> <%= @spot.spot_location %></p>
