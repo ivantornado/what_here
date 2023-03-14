@@ -5,7 +5,8 @@ class SpotsController < ApplicationController
 
   def index
     @spots = Spot.all
-    # @places = @client.spots_by_query(location, types: selected, exclude: unselected)
+    # @client = GooglePlaces::Client.new(ENV.fetch('API_KEY'))
+    # @places = @client.spots_by_query(current_user.location, radius: 500)
     # @places.each do |place|
     #   next if place.photos.empty?
 

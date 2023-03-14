@@ -10,17 +10,11 @@
     </p>
   </div>
   <div style='padding-bottom: 24px'>
-    <%= simple_form_for :search, url: profile_path, method: :get do |f| %>
-        <div class="search-form-control form-group">
-          <input class="form-control string required" type="text" name="query" value="<%= params[:query] %>" placeholder="Location..." id="search_query" />
-          <button name="button" type="submit" class="btn btn-ghost">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
+    <%= simple_form_for current_user do |f| %>
+      <%= f.input :location %>
+      <%= f.input :radius, as: :range, step: 10, min: 100, max: 1000 %>
+      <%= f.button :submit %>
     <% end %>
-    <div class='profile-box'>
-      <p><%= link_to "Edit Profile", user_registration_path, class:"text-decoration-none", data: {turbo_method: :patch}, style: "color: black" %></p>
-    </div>
   <div>
 </div>
 </div>
@@ -52,6 +46,9 @@
       <div class="col">
         <button type = "button" id = "b7" class = "small_btn">Garden</button>
       </div>
+    </div>
+    <div class='profile-box'>
+      <p><%= link_to "Edit Profile", user_registration_path, class:"text-decoration-none", data: {turbo_method: :patch}, style: "color: black" %></p>
     </div>
     <%= link_to "Log out", destroy_user_session_path, class:"btn-black-profile text-decoration-none", data: {turbo_method: :delete} %>
   </div>
