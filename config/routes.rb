@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     member do
       post 'toggle_favorite', to: "spots#toggle_favorite"
       post 'dislike', to: "spots#dislike"
+      post 'update_state'
     end
   end
 
@@ -18,3 +19,4 @@ Rails.application.routes.draw do
   get '/favorites', to: 'spots#favorites'
   get '/bookmarks', to: 'spots#bookmarks'
 end
+

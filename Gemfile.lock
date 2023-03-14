@@ -165,6 +165,7 @@ GEM
     mime-types-data (3.2023.0218.1)
     mini_mime (1.1.2)
     minitest (5.18.0)
+    motion-swipe (0.0.7)
     msgpack (1.6.1)
     multi_xml (0.6.0)
     net-imap (0.3.4)
@@ -303,6 +304,7 @@ DEPENDENCIES
   google_places
   jbuilder
   jsbundling-rails
+  motion-swipe
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.2)
