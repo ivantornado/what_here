@@ -12,7 +12,7 @@
   <div style='padding-bottom: 24px'>
     <%= simple_form_for current_user do |f| %>
       <%= f.input :location %>
-      <%= f.input :radius, as: :range, step: 10, min: 100, max: 1000 %>
+      <%= f.input :radius %>
       <%= f.button :submit %>
     <% end %>
   <div>
