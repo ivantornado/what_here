@@ -1,0 +1,6 @@
+<div style="margin-bottom:30px">
+  <h2>Your <%= @folder.name %> Spots</h2>
+  <% @favorites.each do |favorite| %>
+    <%= favorite.favoritable.name %>
+  <% end %>
+</div>

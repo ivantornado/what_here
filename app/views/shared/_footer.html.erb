@@ -7,7 +7,7 @@
   <%= link_to favorites_path, class: "homepage-icon" do %>
     <i class="fa-solid fa-heart" style='color:lightgrey; font-size: 30px;'></i>
   <% end %>
-  <%= link_to bookmarks_path, class: "homepage-icon" do %>
+  <%= link_to folders_path, class: "homepage-icon" do %>
     <i class="fa-solid fa-bookmark" style='color:lightgrey; font-size: 30px;'></i>
   <% end %>
   <%= link_to profile_path, class: "homepage-icon" do %>
@@ -22,14 +22,14 @@
     <%= link_to favorites_path, class: "homepage-icon" do %>
       <i class="fa-solid fa-heart" style='color:#35B5FF; font-size: 30px;'></i>
     <% end %>
-    <%= link_to bookmarks_path, class: "homepage-icon" do %>
+    <%= link_to folders_path, class: "homepage-icon" do %>
       <i class="fa-solid fa-bookmark" style='color:lightgrey; font-size: 30px'></i>
     <% end %>
     <%= link_to profile_path, class: "homepage-icon" do %>
       <i class="fa-solid fa-user" style='color:lightgrey; font-size: 30px;'></i>
     <% end %>
   </div>
-<% elsif controller_name == 'spots' && action_name == 'bookmarks'%>
+<% elsif controller_name == 'folders' && action_name == 'index'%>
   <div class='footer-container'>
     <%= link_to root_path, class: "homepage-icon" do %>
       <i class="fa-solid fa-house" style='color:lightgrey; font-size: 30px;'></i>
@@ -37,7 +37,7 @@
     <%= link_to favorites_path, class: "homepage-icon" do %>
       <i class="fa-solid fa-heart" style='color:lightgrey; font-size: 30px;'></i>
     <% end %>
-    <%= link_to bookmarks_path, class: "homepage-icon" do %>
+    <%= link_to folders_path, class: "homepage-icon" do %>
       <i class="fa-solid fa-bookmark" style='color:#35B5FF; font-size: 30px'></i>
 
     <% end %>
@@ -53,7 +53,7 @@
     <%= link_to favorites_path, class: "homepage-icon" do %>
       <i class="fa-solid fa-heart" style='color:lightgrey; font-size: 30px;'></i>
     <% end %>
-    <%= link_to bookmarks_path, class: "homepage-icon" do %>
+    <%= link_to folders_path, class: "homepage-icon" do %>
       <i class="fa-solid fa-bookmark" style='color:lightgrey; font-size: 30px'></i>
     <% end %>
     <%= link_to profile_path, class: "homepage-icon" do %>

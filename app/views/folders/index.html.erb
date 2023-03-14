@@ -1,0 +1,14 @@
+<div style="margin-bottom:30px">
+  <h2>Your folders</h2>
+  <% @folders.each do |folder| %>
+    <div class="fav-card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url()">
+      <%= link_to folder_path(folder), style:"text-decoration:none; color:white;" do %>
+        <p><%= folder.name %></p>
+      <% end %>
+      <div> <%= link_to "X", folder_path(folder), data: { turbo_method: :delete } %> </div>
+      <div> <%= link_to "✎", edit_folder_path(folder)%> </div>
+    </div>
+  <% end %>
+
+  <%= link_to "Create Folder", new_folder_path  %>
+</div>
