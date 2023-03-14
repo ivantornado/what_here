@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     member do
       post 'toggle_favorite', to: "spots#toggle_favorite"
       post 'dislike', to: "spots#dislike"
+      post 'update_state'
     end
 
     resources :favorites, only: :index
@@ -29,3 +30,4 @@ Rails.application.routes.draw do
   # get '/bookmarksfolders', to: 'folders#index', as: :folders
   # get '/bookmarks/folders/:id', to: 'folders#show', as: :folder
 end
+
