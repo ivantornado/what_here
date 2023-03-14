@@ -6,6 +6,13 @@
   background-color: white .8;
 }
 
+.card-likes {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
 
 // }
 .show_card {
@@ -167,3 +174,4 @@
 .card-index.swipe-right {
   transform: translateX(100%);
 }
+
