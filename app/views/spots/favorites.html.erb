@@ -1,9 +1,11 @@
-<div style="padding-bottom:98px">
-  <h2>Your Liked Spots</h2>
+<div style="padding-bottom: 98px">
   <% @favorites.each do |favorite| %>
-    <div class="fav-card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%= asset_path(favorite.favoritable.photo) %>)">
+    <div class="fav-card" style="position:relative; background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%= asset_path(favorite.favoritable.photo) %>)">
       <%= link_to spot_path(favorite.favoritable_id), style:"text-decoration:none; color:white;" do %>
         <p><%= favorite.favoritable.name %></p>
+      <% end %>
+      <%= link_to toggle_favorite_spot_path(favorite.favoritable), data:{turbo_method: :post}, style:"position:absolute; top: 0px; right: 8px;" do %>
+        <i class="fa-solid fa-xmark" style="color: #ffffff; font-size: 22px;"></i>
       <% end %>
     </div>
   <% end %>

@@ -20,7 +20,6 @@
         <%= f.submit %>
       <% end %>
     <% end %>
-
     <%# the buttons  %>
     <% if current_user.favorites.find_by(favoritable_id: @spot.id) %>
       <%= link_to 'Remove from Liked', toggle_favorite_spot_path(@spot), data:{turbo_method: :post}, class:"btn-black text-decoration-none" %>
