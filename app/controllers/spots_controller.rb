@@ -1,7 +1,5 @@
-require 'uri'
-
 class SpotsController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[index show toggle_favorite]
+  before_action :authenticate_user!
 
   def index
     @spots = Spot.all
