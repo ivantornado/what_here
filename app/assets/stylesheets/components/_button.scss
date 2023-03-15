@@ -73,6 +73,40 @@
   margin-top: 16px;
 }
 
+.btn-grey-profile {
+  font-size: 16px;
+  color: white;
+  padding: 14px 0px;
+  border-radius: 20px;
+  background: #dddddd;
+  transition: 0.3s ease;
+  // width: 150px;
+  text-align: center;
+  width: 354px;
+  height: 55px;
+  left: 13px;
+  top: 518px;
+  display: inline-block;
+  margin-top: 16px;
+}
+
+.btn-white-profile {
+  font-size: 16px;
+  color: #dddddd;
+  padding: 14px 0px;
+  border-radius: 20px;
+  background: white;
+  transition: 0.3s ease;
+  // width: 150px;
+  text-align: center;
+  width: 354px;
+  height: 55px;
+  left: 13px;
+  top: 518px;
+  display: inline-block;
+  margin-top: 16px;
+}
+
 // ------------ ⌄⌄⌄⌄ profile page cancel-account black_button
 
 #btn-black-cancel-account {
