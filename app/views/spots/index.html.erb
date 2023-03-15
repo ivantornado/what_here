@@ -4,6 +4,8 @@
       <%= link_to spot_path(spot.id), style:"text-decoration:none" do %>
         <div class="card-index" style="position:absolute; background-image: url('<%= spot.photo %>'); background-size: cover;">
             <h1><%= spot.name %></h1>
+            <h2> · <%= spot.category %> · </h2>
+            <p>📍<%= spot.spot_location %></p>
         </div>
       <% end %>
       <%= link_to toggle_favorite_spot_path(spot), data: { turbo_method: :post }, style: "position: absolute; bottom: 138px; right: 86px;" do %>

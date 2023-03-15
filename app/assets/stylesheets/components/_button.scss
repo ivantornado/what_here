@@ -167,8 +167,8 @@
 //------------------ LIKE AND UNLIKE BUTTONS
 
 .no-button {
-  background: rgb(255,255,255);
-  background: linear-gradient(270deg, rgba(255,255,255,1) 20%, rgba(140,14,3,1) 47%);  color: #B52517;
+  background: rgb(149, 1, 1);
+  color: #B52517;
   display: flex;
   width: 50%;
   text-align: center;
@@ -180,10 +180,8 @@
 }
 
 .like-button {
-  background: rgb(255,255,255);
-  background: linear-gradient(90deg, white 20%, rgba(9, 69, 134, 0.889815) 47%);
-  // background-color: #094586;
-  color: #0C3C6E;
+  background: #0C3C6E;
+  color: #1e4599;
   display: flex;
   width: 50%;
   height: 70px;
