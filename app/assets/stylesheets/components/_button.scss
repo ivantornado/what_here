@@ -162,28 +162,30 @@
 
 //------------------ LIKE AND UNLIKE BUTTONS
 
-.no-button {
-  background: rgb(149, 1, 1);
-  color: #B52517;
+.like-button {
+  background: #38b6ffdd;
+  color: #ffffff;
+  opacity: 85%;
   display: flex;
-  width: 50%;
-  text-align: center;
-  height: 70px;
+  width: 172px;
+  height: 50px;
   align-items: center;
-  opacity: 70%;
   border-radius: 50px;
-  padding-left: 16px;
+  justify-content: center;
+  font-size: 33px;
+  text-decoration: none;
 }
 
-.like-button {
-  background: #0C3C6E;
-  color: #1e4599;
+.no-button {
+  background: #bd0045eb;
+  color: #ffffff;
+  opacity: 85%;
   display: flex;
-  width: 50%;
-  height: 70px;
+  width: 172px;
+  text-align: center;
+  height: 50px;
   align-items: center;
-  opacity: 70%;
   border-radius: 50px;
-  justify-content: end;
-  padding-right: 16px
+  justify-content: center;
+  font-size: 38px
 }
