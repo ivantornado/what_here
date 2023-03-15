@@ -3,9 +3,9 @@
     <% next if current_user.favorites.map { |favorite| favorite.favoritable.name }.include?(spot.name) %>
       <%= link_to spot_path(spot.id), style:"text-decoration:none" do %>
         <div class="card-index" style="position:absolute; background-image: url('<%= spot.photo %>'); background-size: cover;">
-            <h1><%= spot.name %></h1>
-            <h2> · <%= spot.category %> · </h2>
-            <p>📍<%= spot.spot_location %></p>
+          <h2 id='category-tag'><%= spot.category %></h2>
+          <h1><%= spot.name %></h1>
+          <p>📍<%= spot.spot_location %></p>
         </div>
       <% end %>
       <%= link_to toggle_favorite_spot_path(spot), data: { turbo_method: :post }, style: "position: absolute; bottom: 138px; right: 30px;text-decoration: none;" do %>
@@ -20,11 +20,6 @@
 
 
 <br>
-<h3>SURPIRSE</h3>
-<h3>you've reached the end</h3>
-
-<h3>you love swiping on our app no?</h3>
-
-<h3>Yes, its great. We agree.</h3>
+<h3>No more results in your area...</h3>
 
 <script src="path/to/hammer.js"></script>
