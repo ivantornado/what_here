@@ -210,20 +210,25 @@
 
 
 .folder-card {
-  background-size: cover;
-  background-position: center;
+  // background-size: cover;
+  // background-position: center;
+  background: rgb(255,102,196);
+  background: radial-gradient(circle, rgba(255,102,196,1) 4%, rgba(56,182,255,1) 100%);
   margin-top: 10px;
-  height: 100px;
+  height: 65px;
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   color: white;
   font-size: 24px;
-  font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
+  border-radius: 11px;
   box-shadow: 0 0 11px rgba(0,0,0,0.2);
 }
 
-
+.folder-card h1 {
+  font-size: 45px;
+  text-align: left;
+  padding-left: 12px;
+}
 
