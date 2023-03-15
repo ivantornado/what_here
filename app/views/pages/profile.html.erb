@@ -1,55 +1,67 @@
-<div class="d-flex justify-content-center flex-column align-items-center" style="margin-bottom:80px">
-  <div class="avatar-big">
-    <% if current_user.photo.present? %>
-      <%= cl_image_tag current_user.photo.key, :transformation=>[{:aspect_ratio=>"1.0", :gravity=>"face", :width=>0.2, :zoom=>0.2, :crop=>"thumb"},{:radius=>"max"}] %>
-    <% else %>
-      <img src="assets/default_pic.png" width="0.4">
-    <% end %>
-    <p id="profile-name"> <%= current_user.email %> </p>
-    <p class='profile-data'>
-    </p>
-  </div>
-  <div style='padding-bottom: 24px'>
-    <%= simple_form_for current_user do |f| %>
-      <%= f.input :location %>
-      <%= f.range_field :radius, step: 10, min: 100, max: 1000 %>
+<div class="container" style="padding:0;">
+  <div class="d-flex justify-content-center flex-column align-items-center position:relative">
+    <div class="avatar-big">
+      <% if current_user.photo.present? %>
+        <%= cl_image_tag current_user.photo.key, :transformation=>[{:aspect_ratio=>"1.0", :gravity=>"face", :width=>0.2, :zoom=>0.2, :crop=>"thumb"},{:radius=>"max"}] %>
+      <% else %>
+        <img src="assets/default_pic.png" width="0.4">
+      <% end %>
+      <p id="profile-name"> <%= current_user.username %> </p>
+      <p class='profile-data'>
+      </p>
+    </div>
+    <div>
+    <div style='padding-bottom: 35px'>
+      <%= simple_form_for current_user do |f| %>
+        <div style='padding-bottom: 20px'><%= f.input :location %></div>
+        <div class="d-flex justify-content-center"><%= f.range_field :radius, step: 1000, min: 1000, max: 10000 %></div>
+    </div>
+    <div id = "container" data-controller="btn-change" >
+      <div class="row" id="second">
+        <div class="col">
+
+      <div class="row">
+        <div class="col" style="padding:0px 4px">
+          <button type = "button" class = "small_btn btn-category" data-btn-change-target="button1" data-action="click->btn-change#colorChange" >Restaurants</button>
+        </div>
+        <div class="col" style="padding:0px 4px">
+          <button type = "button" class = "small_btn btn-category" data-btn-change-target="button2" data-action="click->btn-change#colorChange">Monuments</button>
+        </div>
+        <div class="col" style="padding:0px 4px">
+          <button type = "button" class = "small_btn btn-category" data-btn-change-target="button3" data-action="click->btn-change#colorChange">Nightlife</button>
+        </div>
+        <div class="col" style="padding:0px 4px">
+          <button type = "button" class = "small_btn btn-category" data-btn-change-target="button4" data-action="click->btn-change#colorChange">Religious</button>
+        </div>
+        <div class="col" style="padding:0px 4px">
+          <button type = "button" class = "small_btn btn-category" data-btn-change-target="button5" data-action="click->btn-change#colorChange">Sunsets</button>
+        </div>
+        <div class="col" style="padding:0px 4px">
+          <button type = "button" class = "small_btn btn-category" data-btn-change-target="button6" data-action="click->btn-change#colorChange">Nature</button>
+        </div>
+        <div class="col" style="padding:0px 4px">
+          <button type = "button" class = "small_btn btn-category" data-btn-change-target="button7" data-action="click->btn-change#colorChange">Bars</button>
+        </div>
+        <div class="col" style="padding:0px 4px">
+          <button type = "button" class = "small_btn btn-category" data-btn-change-target="button8" data-action="click->btn-change#colorChange">Pet Friendly</button>
+        </div>
+        <div class="col" style="padding:0px 4px">
+          <button type = "button" class = "small_btn btn-category" data-btn-change-target="button9" data-action="click->btn-change#colorChange">Shopping</button>
+        </div>
+        <div class="col" style="padding:0px 4px; padding-bottom: 15px">
+          <button type = "button" class = "small_btn btn-category" data-btn-change-target="button10" data-action="click->btn-change#colorChange">Religious</button>
+        </div>
+      </div>
+    </div>
+    <div class="btn-white-profile text-decoration-none" style="margin-left:22px; background:lightgrey;">
       <%= f.button :submit %>
-    <% end %>
-  <div>
-</div>
-</div>
-  <div id = "container" data-controller="btn-change" >
-    <div class="row" id="second">
-      <div class="col">
-      </div >
-      <p>Choose your preferred categories:</p>
+      <% end %>
     </div>
-    <div class="row">
-      <div class="col">
-        <button type = "button" class = "small_btn btn-category" data-btn-change-target="button1" data-action="click->btn-change#colorChange" >Restaurants</button>
-      </div>
-      <div class="col">
-        <button type = "button" class = "small_btn btn-category" data-btn-change-target="button2" data-action="click->btn-change#colorChange">Monuments</button>
-      </div>
-      <div class="col">
-        <button type = "button" class = "small_btn btn-category" data-btn-change-target="button3" data-action="click->btn-change#colorChange">Bars</button>
-      </div>
-      <div class="col">
-        <button type = "button" class = "small_btn btn-category" data-btn-change-target="button4" data-action="click->btn-change#colorChange">Sightseeing</button>
-      </div>
-      <div class="col">
-        <button type = "button" class = "small_btn btn-category" data-btn-change-target="button5" data-action="click->btn-change#colorChange">Beach</button>
-      </div>
-      <div class="col">
-        <button type = "button" class = "small_btn btn-category" data-btn-change-target="button6" data-action="click->btn-change#colorChange">Nightclub</button>
-      </div>
-      <div class="col">
-        <button type = "button" class = "small_btn btn-category" data-btn-change-target="button7" data-action="click->btn-change#colorChange">Garden</button>
-      </div>
+    <div>
+      <%= link_to "Edit Profile", user_registration_path, class:"btn-grey-profile text-decoration-none", data: {turbo_method: :patch}, style: "color: black" %>
     </div>
-    <div class='profile-box'>
-      <p><%= link_to "Edit Profile", user_registration_path, class:"text-decoration-none", data: {turbo_method: :patch}, style: "color: black" %></p>
+    <div>
+      <%= link_to "Log out", destroy_user_session_path, class:"btn-black-profile text-decoration-none", data: {turbo_method: :delete} %>
     </div>
-    <%= link_to "Log out", destroy_user_session_path, class:"btn-black-profile text-decoration-none", data: {turbo_method: :delete} %>
   </div>
 </div>
