@@ -91,8 +91,6 @@
 }
 
 .card-index h1 {
-  position: absolute;
-  bottom: 132px;
   font-size: 28px;
   font-weight: bold;
   margin: 0;
@@ -102,20 +100,29 @@
   text-shadow: 0px 0px 8px black;
 }
 
-#category-tag {
+.pink {
+  background-color: #ff57c7c0 ;
+  color: white;
+  display: table;
+}
+
+.category-tag {
   background-color: #ff57c7c0 ;
   color: white;
   padding: 5px 10px;
   border-radius: 50px;
   font-size: 12px;
-  margin-left: 12px;
-  margin-bottom: 65px;
   box-shadow: 0px 0px 2px;
 }
 
-.card-index h2 {
+.card-index .card-info {
   position: absolute;
-  bottom: 108px;
+  bottom: 50px;
+}
+
+.card-index h2 {
+  // position: absolute;
+  // bottom: 108px;
   font-size: 12px;
   color: rgb(220, 220, 220);
   size: 30px;
@@ -123,10 +130,9 @@
   text-shadow: 0px 0px 8px black;
 }
 
-
 .card-index p {
-  position: absolute;
-  bottom: 77px;
+  // position: absolute;
+  // bottom: 77px;
   font-size: 16px;
   font-weight:lighter;
   margin-left: -3px;
@@ -225,3 +231,4 @@
   text-align: left;
   padding-left: 12px;
 }
+
