@@ -3,9 +3,11 @@
     <% next if current_user.favorites.map { |favorite| favorite.favoritable.name }.include?(spot.name) %>
       <%= link_to spot_path(spot.id), style:"text-decoration:none" do %>
         <div class="card-index" style="position:absolute; background-image: url('<%= spot.photo %>'); background-size: cover;">
-          <h2 id='category-tag'><%= spot.category %></h2>
-          <h1><%= spot.name %></h1>
-          <p>📍<%= spot.spot_location %></p>
+          <div class="card-info">
+            <span class="badge rounded-pill pink ms-2"><%= spot.category %></span>
+            <h1><%= spot.name %></h1>
+            <p style="padding-bottom: 4px; padding-top: 0px;">📍<%= spot.spot_location %></p>
+          </div>
         </div>
       <% end %>
       <%= link_to toggle_favorite_spot_path(spot), data: { turbo_method: :post }, style: "position: absolute; bottom: 138px; right: 30px;text-decoration: none;" do %>
