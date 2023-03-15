@@ -3,25 +3,25 @@
     <% next if current_user.favorites.map { |favorite| favorite.favoritable.name }.include?(spot.name) %>
       <%= link_to spot_path(spot.id), style:"text-decoration:none" do %>
         <div class="card-index" style="position:absolute; background-image: url('<%= spot.photo %>'); background-size: cover;">
+          <div class="card-info">
+            <span class="badge rounded-pill pink ms-2"><%= spot.category %></span>
             <h1><%= spot.name %></h1>
+            <p style="padding-bottom: 4px; padding-top: 0px;">📍<%= spot.spot_location %></p>
+          </div>
         </div>
       <% end %>
-      <%= link_to toggle_favorite_spot_path(spot), data: { turbo_method: :post }, style: "position: absolute; bottom: 138px; right: 86px;" do %>
-        <i class="fa-brands fa-gratipay" style="color: #38b4ff; font-size: 62px;"></i>
+      <%= link_to toggle_favorite_spot_path(spot), data: { turbo_method: :post }, style: "position: absolute; bottom: 138px; right: 30px;text-decoration: none;" do %>
+        <div class='like-button'> <i class="fa-solid fa-heart"></i> </div>
       <% end %>
-      <%= link_to dislike_spot_path(spot), data: { turbo_method: :post }, style: "position: absolute; bottom: 138px; left: 86px;" do %>
-        <i class="fa-solid fa-circle-xmark" style="color: #e61e1e; font-size: 62px;"></i>
+      <%= link_to dislike_spot_path(spot), data: { turbo_method: :post }, style: "position: absolute; bottom: 138px; left: 30px; text-decoration: none;" do %>
+        <div class='no-button'> <i class="fa-solid fa-xmark"></i> </div>
       <% end %>
   <% end %>
 </div>
 
 
+
 <br>
-<h3>SURPIRSE</h3>
-<h3>you've reached the end</h3>
-
-<h3>you love swiping on our app no?</h3>
-
-<h3>Yes, its great. We agree.</h3>
+<h3>No more results in your area...</h3>
 
 <script src="path/to/hammer.js"></script>

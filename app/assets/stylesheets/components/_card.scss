@@ -31,6 +31,8 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   height: 698px;
   width: 374px;
+  overflow:auto;
+
 
 }
 
@@ -40,10 +42,11 @@
   object-fit: cover;
 }
 
-.card-trip h2 {
+.card-trip h2 h3 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  text-align: left;
 }
 
 .card-trip p {
@@ -55,10 +58,12 @@
 
 .card-trip .card-trip-infos {
   padding: 16px;
+  padding-bottom: 15px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: flex-end;
 }
+
 
 .card-trip-infos .card-trip-user {
   right: 16px;
@@ -86,20 +91,55 @@
 }
 
 .card-index h1 {
-  position: absolute;
-  bottom: 148px;
-  font-size: 23px;
+  font-size: 28px;
   font-weight: bold;
   margin: 0;
   color: white;
   size: 30px;
   padding-left: 11px;
+  text-shadow: 0px 0px 8px black;
+}
+
+.pink {
+  background-color: #ff57c7c0 ;
+  color: white;
+  display: table;
+}
+
+.category-tag {
+  background-color: #ff57c7c0 ;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: 12px;
+  box-shadow: 0px 0px 2px;
+}
+
+.card-index .card-info {
+  position: absolute;
+  bottom: 50px;
+}
+
+.card-index h2 {
+  // position: absolute;
+  // bottom: 108px;
+  font-size: 12px;
+  color: rgb(220, 220, 220);
+  size: 30px;
+  padding: 12px;
+  text-shadow: 0px 0px 8px black;
 }
 
 .card-index p {
+  // position: absolute;
+  // bottom: 77px;
   font-size: 16px;
-  opacity: .8;
-  margin: 0;
+  font-weight:lighter;
+  margin-left: -3px;
+  color: rgb(220, 220, 220);
+  size: 30px;
+  padding: 12px;
+  text-shadow: 0px 0px 8px black;
 }
 
 
@@ -167,29 +207,28 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.card-index.swipe-left {
-  transform: translateX(-100%);
-}
-
-.card-index.swipe-right {
-  transform: translateX(100%);
-}
-
 
 
 .folder-card {
-  background-size: cover;
-  background-position: center;
+  // background-size: cover;
+  // background-position: center;
+  background: rgb(255,102,196);
+  background: radial-gradient(circle, rgba(255,102,196,1) 4%, rgba(56,182,255,1) 100%);
   margin-top: 10px;
-  height: 100px;
+  height: 65px;
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   color: white;
   font-size: 24px;
-  font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
+  border-radius: 11px;
   box-shadow: 0 0 11px rgba(0,0,0,0.2);
+}
+
+.folder-card h1 {
+  font-size: 45px;
+  text-align: left;
+  padding-left: 12px;
 }
 

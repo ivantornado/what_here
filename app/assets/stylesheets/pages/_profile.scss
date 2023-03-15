@@ -1,6 +1,4 @@
-h1 {
-  text-align: center;
-}
+
 #main-content {
   background-color: #ffffff41;
   max-height: 100vh;
@@ -46,16 +44,20 @@ h1 {
   margin-top: 1px;
 }
 
+
+
 .profile-box {
   display: flex;
+
   background-color: #dddddd;
+
   justify-content: center;
   margin-top: 24px;
-  width: 364px;
+  width: 368px;
   border-color: rgb(227, 227, 227);
   align-items: center;
   text-align: center;
-  border-radius: 9px;
+  border-radius: 11px;
 }
 
 .profile-box > p {

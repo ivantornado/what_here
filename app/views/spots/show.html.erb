@@ -5,31 +5,30 @@
     <% end %>
   <h2 class="card-trip-pricing" style="position: absolute; top: 438px; right: 10px; color: white; font-size: 22px;"><%= @spot.rating %>⭐️</h2>
   <div class="card-trip-infos">
-    <div>
-      <% if @favorite.present? %>
-        <%= simple_form_for @favorite_folder do |f| %>
-          <%= f.association :folder %>
-          
-          <%= f.submit %>
-        <% end %>
+
+    <h3><%= @spot.name %></h3>
+    <h6 style="color:#0074b7 text-weight:bold"> <%= @spot.category %></h6>
+    <p><i class="fa-sharp fa-solid fa-info" style="color:#0074b7">&nbsp;&nbsp;</i><%= @spot.description %></p>
+    <br>
+    <p><i class="fa-solid fa-location-dot" style="color:#0074b7">&nbsp;</i><%= @spot.spot_location %></p>
+    <br>
+
+    <%# the form to bookmark %>
+    <% if @favorite.present? %>
+      <%= simple_form_for @favorite_folder do |f| %>
+        <%= f.association :folder %>
+        <%= f.submit %>
       <% end %>
-      <h3><%= @spot.name %></h3>
-      <p><i class="fa-solid fa-location-dot" style="color:#0074b7"></i> <%= @spot.spot_location %></p>
-      <p><i class="fa-sharp fa-solid fa-info" style="color:#0074b7"></i><%= @spot.description %></p>
-      <br>
-
-      <div class="button-container">
-        <% if current_user.favorites.find_by(favoritable_id: @spot.id) %>
-
-          <%= link_to 'Remove from Liked', toggle_favorite_spot_path(@spot), data:{turbo_method: :post}, class:"btn-black text-decoration-none button button-wide" %>
-
-        <% else %>
-          <%= link_to 'Add to Liked', toggle_favorite_spot_path(@spot), data:{turbo_method: :post}, class:"btn-blue text-decoration-none" %>
-        <% end %>
-      </div>
+    <% end %>
+    <%# the buttons  %>
+    <% if current_user.favorites.find_by(favoritable_id: @spot.id) %>
+      <%= link_to 'Remove from Liked', toggle_favorite_spot_path(@spot), data:{turbo_method: :post}, class:"btn-black text-decoration-none" %>
+    <% else %>
+      <%= link_to 'Add to Liked', toggle_favorite_spot_path(@spot), data:{turbo_method: :post}, class:"btn-blue text-decoration-none" %>
+    <% end %>
 
 
-    </div>
+
   </div>
 </div>
 

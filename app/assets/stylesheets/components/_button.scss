@@ -23,32 +23,30 @@
   font-size: 16px;
   color: white;
   padding: 14px 0px;
+  margin-top: 16px;
   border-radius: 4px;
   background: #000000;
   transition: 0.3s ease;
-  // width: 150px;
   text-align: center;
-  width: 354px;
+  width: 341px;
   height: 55px;
-  left: 13px;
-  top: 518px;
   display: inline-block;
 
 }
 
 .btn-blue {
-  font-size: 16px;
+
+
+  font-size: 22px;
   color: white;
-  padding: 14px 0px;
+  padding: 12px 0px;
+  margin-top: 16px;
   border-radius: 4px;
   background: #35b6fe;
   transition: 0.3s ease;
-  // width: 150px;
   text-align: center;
-  width: 354px;
+  width: 341px;
   height: 55px;
-  left: 13px;
-  top: 518px;
   display: inline-block;
 
 }
@@ -63,12 +61,11 @@
   font-size: 16px;
   color: white;
   padding: 14px 0px;
-  border-radius: 20px;
+  border-radius: 11px;
   background: #000000;
   transition: 0.3s ease;
-  // width: 150px;
   text-align: center;
-  width: 354px;
+  width: 368px;
   height: 55px;
   left: 13px;
   top: 518px;
@@ -175,55 +172,34 @@
 }
 
 
-// --------button container in the show page
-
-.button-container {
-  position: absolute; /* Position the button container absolutely within the card */
-  bottom: 20px; /* Position it 20px from the bottom */
-  left: 0; /* Align it to the left edge */
-  width: 100%; /* Make it span the entire width of the card */
-  display: flex;
-  padding: 10px;
-}
-
-
-.button-wide {
-  flex-basis: 80%;
-}
-
-.button-narrow {
-  flex-basis: 20%;
-  margin-left: 5px;
-}
-
 
 
 //------------------ LIKE AND UNLIKE BUTTONS
 
-.no-button {
-  background: rgb(255,255,255);
-  background: linear-gradient(270deg, rgba(255,255,255,1) 20%, rgba(140,14,3,1) 47%);  color: #B52517;
+.like-button {
+  background: #38b6ffdd;
+  color: #ffffff;
+  opacity: 85%;
   display: flex;
-  width: 50%;
-  text-align: center;
-  height: 70px;
+  width: 172px;
+  height: 50px;
   align-items: center;
-  opacity: 70%;
   border-radius: 50px;
-  padding-left: 16px;
+  justify-content: center;
+  font-size: 33px;
+  text-decoration: none;
 }
 
-.like-button {
-  background: rgb(255,255,255);
-  background: linear-gradient(90deg, white 20%, rgba(9, 69, 134, 0.889815) 47%);
-  // background-color: #094586;
-  color: #0C3C6E;
+.no-button {
+  background: #bd0045eb;
+  color: #ffffff;
+  opacity: 85%;
   display: flex;
-  width: 50%;
-  height: 70px;
+  width: 172px;
+  text-align: center;
+  height: 50px;
   align-items: center;
-  opacity: 70%;
   border-radius: 50px;
-  justify-content: end;
-  padding-right: 16px
+  justify-content: center;
+  font-size: 38px
 }
