@@ -1,7 +1,7 @@
 <div style="margin-bottom:30px">
   <h2>Your folders</h2>
   <% @folders.each do |folder| %>
-    <div class="folder-card" style="position:relative; background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url()">
+    <div class="folder-card" style="position:relative; background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://picsum.photos/seed/picsum/600/400)">
       <%= link_to folder_path(folder), style:"text-decoration:none; color:white;" do %>
         <p><%= folder.name %></p>
       <% end %>

@@ -59,7 +59,7 @@ Spot.create(
 )
 Spot.create(
   name: "Big Ben",
-  spot_location: "Palace of Webminister - .1km from city center.",
+  spot_location: "Palace of Webminister - 0.1km from city center.",
   category: "Landmark",
   description: "16-storey Gothic clocktower and national symbol at the Eastern end of the Houses of Parliament",
   photo: "https://images.unsplash.com/photo-1592509255531-161181e0cb8d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
