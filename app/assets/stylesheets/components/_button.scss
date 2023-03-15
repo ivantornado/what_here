@@ -35,9 +35,11 @@
 }
 
 .btn-blue {
-  font-size: 16px;
+
+
+  font-size: 22px;
   color: white;
-  padding: 14px 0px;
+  padding: 12px 0px;
   margin-top: 16px;
   border-radius: 4px;
   background: #35b6fe;
@@ -59,12 +61,11 @@
   font-size: 16px;
   color: white;
   padding: 14px 0px;
-  border-radius: 20px;
+  border-radius: 11px;
   background: #000000;
   transition: 0.3s ease;
-  // width: 150px;
   text-align: center;
-  width: 354px;
+  width: 368px;
   height: 55px;
   left: 13px;
   top: 518px;
@@ -136,27 +137,6 @@
   color: white;
 }
 
-
-// --------button container in the show page
-
-.button-container {
-  position: absolute; /* Position the button container absolutely within the card */
-  bottom: 20px; /* Position it 20px from the bottom */
-  left: 0; /* Align it to the left edge */
-  width: 100%; /* Make it span the entire width of the card */
-  display: flex;
-  padding: 10px;
-}
-
-
-.button-wide {
-  flex-basis: 80%;
-}
-
-.button-narrow {
-  flex-basis: 20%;
-  margin-left: 5px;
-}
 
 
 
