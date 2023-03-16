@@ -165,7 +165,6 @@ GEM
     mime-types-data (3.2023.0218.1)
     mini_mime (1.1.2)
     minitest (5.18.0)
-    motion-swipe (0.0.7)
     msgpack (1.6.1)
     multi_xml (0.6.0)
     net-imap (0.3.4)
@@ -219,10 +218,6 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
-    redactor-rails (0.5.0)
-      devise
-      mime-types
-      orm_adapter
     regexp_parser (2.7.0)
     reline (0.3.2)
       io-console (~> 0.5)
@@ -244,16 +239,10 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    selectize-rails (0.12.6)
     selenium-webdriver (4.8.1)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    simple_form_extension (1.5.0)
-      rails (>= 3.1)
-      redactor-rails
-      selectize-rails
-      simple_form
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -314,14 +303,12 @@ DEPENDENCIES
   google_places
   jbuilder
   jsbundling-rails
-  motion-swipe
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.2)
   sassc-rails
   selenium-webdriver
   simple_form!
-  simple_form_extension
   sprockets-rails
   stimulus-rails
   turbo-rails
