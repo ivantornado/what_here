@@ -13,7 +13,7 @@
     <div>
     <div style='padding-bottom: 35px'>
       <%= simple_form_for current_user do |f| %>
-        <div style='padding-bottom: 20px'><%= f.input :location %></div>
+        <div style='padding-bottom: 20px'><%= f.input :location, label: false, placeholder: 'Choose a location' %></div>
         <div class="d-flex justify-content-center"><%= f.range_field :radius, step: 1000, min: 1000, max: 10000 %></div>
     </div>
     <div id = "container" data-controller="btn-change" >
@@ -54,7 +54,7 @@
       </div>
     </div>
     <div class="btn-blue-profile" style="margin-left: 20px; color: white;">
-      <%= f.button :submit, 'submitt changes' %>
+      <%= f.button :submit, 'Save' %>
       <% end %>
     </div>
     <div style="display:flex">
