@@ -10,10 +10,10 @@
           </div>
         </div>
       <% end %>
-      <%= link_to toggle_favorite_spot_path(spot), data: { turbo_method: :post }, style: "position: absolute; bottom: 95px; right: 30px;text-decoration: none;" do %>
+      <%= link_to toggle_favorite_spot_path(spot), data: { turbo_method: :post }, class: "choice-button", style: "right: 30px;" do %>
         <div class='like-button'> <i class="fa-solid fa-heart"></i> </div>
       <% end %>
-      <%= link_to dislike_spot_path(spot), data: { turbo_method: :post }, style: "position: absolute; bottom: 95px; left: 30px; text-decoration: none;" do %>
+      <%= link_to dislike_spot_path(spot), data: { turbo_method: :post }, class: "choice-button", style: "left: 30px;" do %>
         <div class='no-button'> <i class="fa-solid fa-xmark"></i> </div>
       <% end %>
   <% end %>
