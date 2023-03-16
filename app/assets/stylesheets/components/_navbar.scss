@@ -8,9 +8,15 @@
   flex-grow: 0;
 }
 
+.navbar-brand {
+  margin-right: 0;
+}
+
 .navbar-lewagon .navbar-brand img {
-  width: 280px;
+  // width: 280px;
+  width: 100%;
   object-fit: contain;
+  height: 65px;
 }
 
 .navbar {
