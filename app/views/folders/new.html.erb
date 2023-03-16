@@ -6,7 +6,7 @@
       <h3>New Collection</h3>
       <br>
       <%= simple_form_for @folder do |f| %>
-        <%= f.input :name, label: false, placeholder: "What's your collection called?" %>
+        <%= f.input :name, label: false, class: "fs-3", placeholder: "What's your collection called?" %>
         <br>
         <%= f.button :submit, "Create New Collection", class: "d-block btn-small text-decoration-none", style: "margin-bottom: 16px"%>
 
