@@ -12,12 +12,12 @@
     <br>
     <p><i class="fa-solid fa-location-dot" style="color:#0074b7">&nbsp;</i><%= @spot.spot_location %></p>
     <br>
-
+    <h5>Bookmark this Spot: </h5>
     <%# the form to bookmark %>
     <% if @favorite.present? %>
       <%= simple_form_for @favorite_folder do |f| %>
         <%= f.association :folder %>
-        <%= f.submit %>
+        <%= f.submit 'Add to Folder', class: "btn-blue" %>
       <% end %>
     <% end %>
     <%# the buttons  %>

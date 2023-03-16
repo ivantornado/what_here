@@ -48,6 +48,8 @@
   width: 341px;
   height: 55px;
   display: inline-block;
+  border-style: none;
+
 
 }
 
@@ -65,44 +67,36 @@
   background: #000000;
   transition: 0.3s ease;
   text-align: center;
-  width: 368px;
+  width: 175px;
   height: 55px;
-  left: 13px;
-  top: 518px;
   display: inline-block;
-  margin-top: 16px;
+  margin: 16px 8px;
 }
 
 .btn-grey-profile {
   font-size: 16px;
   color: white;
   padding: 14px 0px;
-  border-radius: 20px;
+  border-radius: 11px;
   background: #dddddd;
   transition: 0.3s ease;
-  // width: 150px;
   text-align: center;
-  width: 354px;
+  width: 175px;
   height: 55px;
-  left: 13px;
-  top: 518px;
   display: inline-block;
-  margin-top: 16px;
+  margin: 16px 8px;
+
 }
 
-.btn-white-profile {
+.btn-blue-profile {
   font-size: 16px;
   color: #dddddd;
   padding: 14px 0px;
-  border-radius: 20px;
-  background: white;
+  border-radius: 11px;
+  background: #35b6fe;
   transition: 0.3s ease;
-  // width: 150px;
   text-align: center;
-  width: 354px;
-  height: 55px;
-  left: 13px;
-  top: 518px;
+  width: 368px;
   display: inline-block;
   margin-top: 16px;
 }
