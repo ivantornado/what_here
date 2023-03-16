@@ -49,3 +49,35 @@
 @media (max-width: 768px) {
 
 }
+
+
+.container-folder {
+  background-size: cover;
+  background-position: center;
+  padding-left:  30px;
+  padding-right:  30px;
+  padding-top: 150px;
+
+  text-align: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.container-folder-fluid {
+  --bs-gutter-x: 7.0rem;
+}
+
+.container-folder h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.container-folder p {
+  font-size: 23px;
+  color: rgb(0, 0, 0);
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
