@@ -13,8 +13,15 @@
     <div>
     <div style='padding-bottom: 35px'>
       <%= simple_form_for current_user do |f| %>
-        <div style='padding-bottom: 20px'><%= f.input :location, label: false, placeholder: 'Choose a location' %></div>
-        <div class="d-flex justify-content-center"><%= f.range_field :radius, step: 1000, min: 1000, max: 10000 %></div>
+
+                <div style='padding-bottom: 20px'><%= f.input :location, label: false, placeholder: 'Choose a location' %></div>
+        <%= f.label :radius, "Search distance: " %>
+        <div class="d-flex justify-content-center">
+          <%= f.label :radius, "0.5 km - ", style:"padding: 0 10px;" %>
+          <%= f.range_field :radius, in: 0..100, step: 10, min: 1, max: 10 %>
+          <%= f.label :radius, " + 10km", style:"padding: 0 10px;" %>
+        </div>
+
     </div>
     <div id = "container" data-controller="btn-change" >
       <div class="row" id="second">
