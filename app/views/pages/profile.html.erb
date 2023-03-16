@@ -1,4 +1,4 @@
-<div class="container" style="padding:0;">
+<div class="container" style="padding:0; height: 69vh">
   <div class="d-flex justify-content-center flex-column align-items-center position:relative">
     <div class="avatar-big">
       <% if current_user.photo.present? %>
@@ -53,14 +53,12 @@
         </div>
       </div>
     </div>
-    <div class="btn-white-profile text-decoration-none" style="margin-left:22px; background:lightgrey;">
-      <%= f.button :submit %>
+    <div class="btn-blue-profile" style="margin-left: 20px; color: white;">
+      <%= f.button :submit, 'submitt changes' %>
       <% end %>
     </div>
-    <div>
+    <div style="display:flex">
       <%= link_to "Edit Profile", user_registration_path, class:"btn-grey-profile text-decoration-none", data: {turbo_method: :patch}, style: "color: black" %>
-    </div>
-    <div>
       <%= link_to "Log out", destroy_user_session_path, class:"btn-black-profile text-decoration-none", data: {turbo_method: :delete} %>
     </div>
   </div>
