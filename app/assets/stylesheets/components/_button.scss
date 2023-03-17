@@ -204,4 +204,10 @@
   position: absolute;
   bottom: 5px;
   text-decoration: none;
+  transition: all .2s ease-in-out;
+
+  &:active, &:focus {
+    transform: scale(1.2);
+    opacity: 100%;
+  }
 }

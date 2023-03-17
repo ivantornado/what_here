@@ -11,11 +11,11 @@
       </div>
     <% end %>
     <div class="position-absolute w-100" style="bottom: 10px">
-      <%= link_to toggle_favorite_spot_path(spot), data: { turbo_method: :post }, class: "choice-button", style: "right: 30px;" do %>
-        <div class='like-button'> <i class="fa-solid fa-heart"></i> </div>
+      <%= link_to toggle_favorite_spot_path(spot), data: { turbo_method: :post }, class: "choice-button like-button", style: "right: 30px;" do %>
+        <i class="fa-solid fa-heart"></i>
       <% end %>
-      <%= link_to dislike_spot_path(spot), data: { turbo_method: :post }, class: "choice-button", style: "left: 30px;" do %>
-        <div class='no-button'> <i class="fa-solid fa-xmark"></i> </div>
+      <%= link_to dislike_spot_path(spot), data: { turbo_method: :post }, class: "choice-button no-button", style: "left: 30px;" do %>
+        <i class="fa-solid fa-xmark"></i>
       <% end %>
     </div>
   <% end %>
