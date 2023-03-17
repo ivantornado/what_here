@@ -79,22 +79,52 @@ Spot.create(
   photo: "https://www.ldnfashion.com/wp-content/uploads/2017/11/Oxford-Street.jpg",
   rating: 4.3
 )
+
+Spot.create(
+  name: "The Fighting Cocks",
+  spot_location: "31 Piccidilly Ln - 0.3km from city center.",
+  category: "Bar",
+  description: "Classic british pub with everything you expect to see in the UK. It's packed with people, smells like beer and everyone ends up drunk.",
+  photo: "https://images.unsplash.com/photo-1598626594925-58b904ff6cb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+  rating: 3.2
+)
+
 Spot.create(
   name: "Covent Garden",
-  spot_location: "Oxford Street - 1.2km from city center.",
+  spot_location: "29 Floral St - 0.9km from city center.",
   category: "Shopping",
   description: "A shopping and entertainment hub in London's West End, Covent Garden centres on the elegant, car-free Piazza, home to fashion stores, craft stalls at the Apple Market, and the Royal Opera House.",
   photo: "https://i.pinimg.com/originals/61/71/6e/61716ec59c0ba11178d7e98d9d763073.jpg",
   rating: 4.3
 )
+
 Spot.create(
   name: "Brick Lane",
-  spot_location: "Oxford Street - 1.2km from city center.",
+  spot_location: "Brick Lane - 2.6km from city center.",
   category: "Shopping",
   description: "Brick Lane is a vibrant and eclectic area in East London known for its diverse community, street art, and thriving cultural scene. The area boasts a plethora of independent bookshops, vintage clothing stores, and cafes, making it a popular destination for those looking for unique finds and a taste of the local culture.",
   photo: "https://i0.wp.com/essentialldn.com/wp-content/uploads/2020/07/DSCF4341.jpg?fit=720%2C480&ssl=1",
   rating: 4.3
 )
+
+Spot.create(
+  name: "Hyde Park",
+  spot_location: "Hyde Park - 0.2km from city center.",
+  category: "Park",
+  description: "Huge green space, home to Diana Memorial Fountain, with boating and swimming in the Serpentine lake.",
+  photo: "http://prod-upp-image-read.ft.com/115d3e30-7155-11e7-93ff-99f383b09ff9",
+  rating: 4.5
+)
+
+Spot.create(
+  name: "The Alchemist",
+  spot_location: "63-66 St Martin's Ln - 1.3km from city center.",
+  category: "Bar",
+  description: "Known for their theatrical and innovative cocktails, the bars offer a lively atmosphere and an extensive drink menu. The Alchemist also serves food and offers outdoor seating options.",
+  photo: "https://barmagazine.co.uk/wp-content/uploads/2020/03/1-MAIN-The-Alchemist-Canary-Wharf-scaled.jpg",
+  rating: 4.6
+)
+
 Spot.create(
   name: "London Eye",
   spot_location: "Riverside Building, County Hall - 0.4km from city center.",
@@ -103,6 +133,7 @@ Spot.create(
   photo: "https://images.unsplash.com/photo-1582027013518-0e9d9633a2d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3027&q=80",
   rating: 4.3
 )
+
 Spot.create(
   name: "Big Ben",
   spot_location: "Palace of Webminister - 0.1km from city center.",
@@ -111,6 +142,7 @@ Spot.create(
   photo: "https://images.unsplash.com/photo-1592509255531-161181e0cb8d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
   rating: 3.7
 )
+
 Spot.create(
   name: "Camden Town",
   spot_location: "406 Camden Lock Market - 4.2km from city center.",
@@ -119,6 +151,16 @@ Spot.create(
   photo: "https://img.itinari.com/pages/images/original/44eb6073-9978-45aa-93ea-da61a7ecabd4-istock-521303228.jpg?ch=DPR&dpr=2&w=1600&s=30f4274b7205b6fc97776b4f6bce2a18",
   rating: 4.4
 )
+
+Spot.create(
+  name: "Lux Club ",
+  spot_location: " - 1.6km from city center.",
+  category: "Nightlife",
+  description: "Portugal's most internationally renowned venue and one of Lisbon's biggest nightclubs. Deep house, electronic music, two dance floors, rooftop and balconies for smoking with beautiful views, great cocktails and gay-friendly",
+  photo: "https://images.xceed.me/clubs/gallery/lux-fragil-club-lisboa-xceed-10.jpg",
+  rating: 4.8
+)
+
 
 Spot.create(
   name: "Pink Street",
@@ -139,6 +181,15 @@ Spot.create(
 )
 
 Spot.create(
+  name: "Lumi Rooftop Bar & Restaurant",
+  spot_location: "R. de São Pedro de Alcântara 35 - 0.8km from city center.",
+  category: "Restaurant",
+  description: "Stylish rooftop restaurant & cocktail bar featuring brunch, shared plates & grills, plus a terrace.",
+  photo: "https://cms.infoportugal.info/media/pois/final/162/JRN.RE.35194_RCpLJPl.jpg",
+  rating: 4.8
+)
+
+Spot.create(
   name: "Torre de Belém",
   spot_location: "Av. Brasília, 1400-038 - 6.9km from city center.",
   category: "Monument",
@@ -146,7 +197,6 @@ Spot.create(
   photo: "https://images.pexels.com/photos/4304223/pexels-photo-4304223.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   rating: 4.6
 )
-
 
 User.create!(
   username: "Admin",
