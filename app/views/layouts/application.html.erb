@@ -15,7 +15,7 @@
     <div class="page-container">
       <%= render "shared/navbar" if user = current_user %>
         <%= render "shared/flashes" %>
-      <main id="main-content" class="position-relative" style="<%= "min-height: 100vh;" if action_name == "home" %>">
+      <main id="main-content" class="position-relative">
         <%= yield %>
       </main>
       <%= render "shared/footer" if user = current_user%>
