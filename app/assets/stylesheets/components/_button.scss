@@ -6,7 +6,7 @@
   transition: 0.3s ease;
   // width: 150px;
   text-align: center;
-  width: 354px;
+  width: 100%;
   height: 55px;
   left: 13px;
   top: 518px;
@@ -28,15 +28,13 @@
   background: #000000;
   transition: 0.3s ease;
   text-align: center;
-  width: 341px;
+  width: 100%;
   height: 55px;
   display: inline-block;
 
 }
 
 .btn-blue {
-
-
   font-size: 22px;
   color: white;
   padding: 12px 0px;
@@ -45,7 +43,7 @@
   background: #35b6fe;
   transition: 0.3s ease;
   text-align: center;
-  width: 341px;
+  width: 100%;
   height: 55px;
   display: inline-block;
   border-style: none;
@@ -67,7 +65,7 @@
   background: #000000;
   transition: 0.3s ease;
   text-align: center;
-  width: 175px;
+  width: 50%;
   height: 55px;
   display: inline-block;
   margin: 16px 8px;
@@ -81,7 +79,7 @@
   background: #dddddd;
   transition: 0.3s ease;
   text-align: center;
-  width: 175px;
+  width: 50%;
   height: 55px;
   display: inline-block;
   margin: 16px 8px;
@@ -96,7 +94,7 @@
   background: #35b6fe;
   transition: 0.3s ease;
   text-align: center;
-  width: 368px;
+  width: calc(100% - 16px);
   display: inline-block;
   margin-top: 16px;
 }
@@ -135,7 +133,7 @@
   transition: 0.3s ease;
   // width: 150px;
   text-align: center;
-  width: 290px;
+  width: 100%;
   height: 55px;
   display: inline-block;
 
