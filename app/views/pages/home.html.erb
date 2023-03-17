@@ -1,10 +1,12 @@
-<div class="banner">
-  <%= image_tag "trasparentlogo.png", style: "object-fit: contain" %>
-  <h1>EXPLORE THE WORLD</h1>
-  <p>Travel like a local wherever you go</p>
+<div style="height: 100dvh;">
+  <div class="banner">
+    <%= image_tag "trasparentlogo.png", style: "object-fit: contain; padding-top:80px; padding-bottom:32px;" %>
+    <h1>EXPLORE THE WORLD</h1>
+    <p>Travel like a local wherever you go</p>
 
-  <div class="sign-in-buttons-container position-absolute px-4">
-    <p> <%= link_to "Sign Up", new_user_registration_path, style: "color:white", class: "btn-flat text-decoration-none" %></p>
-    <p> <%= link_to "Log In", new_user_session_path, style: "color:white", class: "btn-flat text-decoration-none" %></p>
+    <div class="sign-in-buttons-container position-absolute px-4">
+      <p> <%= link_to "Sign Up", new_user_registration_path, style: "color:white", class: "btn-flat text-decoration-none" %></p>
+      <p> <%= link_to "Log In", new_user_session_path, style: "color:white", class: "btn-flat text-decoration-none" %></p>
+    </div>
   </div>
 </div>
