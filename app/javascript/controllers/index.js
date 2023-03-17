@@ -10,5 +10,5 @@ application.register("btn-change", BtnChangeController)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
-import SwiperController from "./swiper_controller"
-application.register("swiper", SwiperController)
+import SwipeController from './swipe_controller';
+application.register("swiper", SwipeController);

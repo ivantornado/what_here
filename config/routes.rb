@@ -12,7 +12,7 @@ Rails.application.routes.draw do
       post 'toggle_favorite', to: "spots#toggle_favorite"
       post 'dislike', to: "spots#dislike"
       post 'update_state'
-      resources :favorite_folders, only: :create 
+      resources :favorite_folders, only: :create
     end
 
     resources :favorites, only: :index
@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   resources :folders
   resources :users, only: :update
 
-
+  get '/cats', to: "pages#cats"
   get '/profile', to: 'pages#profile'
   get '/favorites', to: 'spots#favorites'
 

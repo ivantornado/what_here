@@ -80,7 +80,7 @@
   background: white;
   box-shadow: 0 0 2px rgba(0,0,0,0.2);
   // height: calc(100vh - 170px);
-  height: calc(100vh - 181px);
+  height: calc(100vh - 240px);
   width: 100%;
   border-radius: 11px;
 }
@@ -129,7 +129,8 @@
 
 .card-index .card-info {
   position: absolute;
-  bottom: 50px;
+  bottom: 68px;
+  left: 15px
 }
 
 .card-index h2 {

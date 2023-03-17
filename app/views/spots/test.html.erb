@@ -22,3 +22,14 @@
   </div>
 </div>
 <%# <%= "active" if @spots.first == spot %>
+
+    <div class="position-absolute w-100" style="bottom: 10px">
+      <%= link_to "#" , data: { url: toggle_favorite_spot_path(spot), turbo_method: :post, action: "click->swiper#swipeRight" },
+        class: "choice-button like-button js-right-trigger", style: "right: 30px;" do %>
+        <i class="fa-solid fa-heart"></i>
+      <% end %>
+      <%= link_to "#", data: { url: dislike_spot_path(spot), turbo_method: :post, action: "click->swiper#swipeLeft" },
+        class: "choice-button no-button js-left-trigger", style: "left: 30px;" do %>
+        <i class="fa-solid fa-xmark"></i>
+      <% end %>
+    </div>
