@@ -77,15 +77,15 @@ export default class extends Controller {
         hammertime = new Hammer(element);
 
       //Mobile gesture
-      hammertime.on('panleft swipeleft', function(event) {
-        swipeLeft(event, $card);
-      });
-      hammertime.on('panright swiperight', function(event) {
-        swipeRight(event, $card);
-      });
-      hammertime.on('panend', function(event) {
-        swipeEnded(event, false, $card);
-      });
+      // hammertime.on('panleft swipeleft', function(event) {
+      //   swipeLeft(event, $card);
+      // });
+      // hammertime.on('panright swiperight', function(event) {
+      //   swipeRight(event, $card);
+      // });
+      // hammertime.on('panend', function(event) {
+      //   swipeEnded(event, false, $card);
+      // });
     });
 
     //Btn controls
