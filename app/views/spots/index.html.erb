@@ -1,27 +1,29 @@
 <div style="position:relative; height: 100%">
   <% @spots.each do |spot| %>
     <% next if current_user.favorites.map { |favorite| favorite.favoritable.name }.include?(spot.name) %>
-      <%= link_to spot_path(spot.id), style:"text-decoration:none" do %>
-        <div class="card-index" style="position:absolute; background-image: url('<%= spot.photo %>'); background-size: cover;">
-          <div class="card-info">
-            <span class="badge rounded-pill pink ms-2"><%= spot.category %></span>
-            <h1><%= spot.name %></h1>
-            <p style="padding-bottom: 4px; padding-top: 0px;">📍<%= spot.spot_location %></p>
-          </div>
+    <%= link_to spot_path(spot.id), style:"text-decoration:none" do %>
+      <div class="card-index" style="position:absolute; background-image: url('<%= spot.photo %>'); background-size: cover;">
+        <div class="card-info">
+          <span class="badge rounded-pill pink ms-2"><%= spot.category %></span>
+          <h1><%= spot.name %></h1>
+          <p style="padding-bottom: 4px; padding-top: 0px;">📍<%= spot.spot_location %></p>
         </div>
-      <% end %>
+      </div>
+    <% end %>
+    <div class="position-absolute w-100" style="bottom: 10px">
       <%= link_to toggle_favorite_spot_path(spot), data: { turbo_method: :post }, class: "choice-button", style: "right: 30px;" do %>
         <div class='like-button'> <i class="fa-solid fa-heart"></i> </div>
       <% end %>
       <%= link_to dislike_spot_path(spot), data: { turbo_method: :post }, class: "choice-button", style: "left: 30px;" do %>
         <div class='no-button'> <i class="fa-solid fa-xmark"></i> </div>
       <% end %>
+    </div>
   <% end %>
 </div>
 
 
 
 <br>
-<h3>No more results in your area...</h3>
+<h3 class="position-absolute" style="top: 0px; z-index: -10">No more results in your area...</h3>
 
 <script src="path/to/hammer.js"></script>
