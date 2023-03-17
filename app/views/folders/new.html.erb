@@ -1,17 +1,14 @@
 
-<body style="background-image: url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=766&q=80'); background-repeat: no-repeat; background-size: cover; height: 65%vh;">
-  <div class="container-folder" >
+<div class="container-folder" >
 
-    <div class="card">
-      <h3>New Collection</h3>
+  <div class="card">
+    <h3>New Collection</h3>
+    <br>
+    <%= simple_form_for @folder do |f| %>
+      <%= f.input :name, label: false, placeholder: "What's your collection called?" %>
       <br>
-      <%= simple_form_for @folder do |f| %>
-        <%= f.input :name, label: false, placeholder: "What's your collection called?" %>
-        <br>
-        <%= f.button :submit, "Create New Collection", class: "d-block btn-small text-decoration-none", style: "margin-bottom: 16px"%>
+      <%= f.button :submit, "Create New Collection", class: "d-block btn-small text-decoration-none", style: "margin-bottom: 16px"%>
 
-      <% end %>
-    </div>
+    <% end %>
   </div>
-
-</body>
+</div>

@@ -1,34 +1,36 @@
-<div class="card-trip" style="position: relative;">
-  <%= image_tag  @spot.photo %>
-  <%= link_to :back do %>
-    <i class="fa-solid fa-chevron-left" style="position: absolute; top: 15px; left: 15px; color: white; font-size: 35px;"></i>
-    <% end %>
-  <h2 class="card-trip-pricing" style="position: absolute; top: 438px; right: 10px; color: white; font-size: 22px;"><%= @spot.rating %>⭐️</h2>
-  <div class="card-trip-infos">
-
-    <h3><%= @spot.name %></h3>
-    <h6 class='cat-tag-show'> <%= @spot.category %><h6>
-    <p><i class="fa-sharp fa-solid fa-info" style="color:#0074b7">&nbsp;&nbsp;</i><%= @spot.description %></p>
-    <br>
-    <p><i class="fa-solid fa-location-dot" style="color:#0074b7">&nbsp;</i><%= @spot.spot_location %></p>
-    <br>
-    <h5>Bookmark this Spot: </h5>
-    <%# the form to bookmark %>
-    <% if @favorite.present? %>
-      <%= simple_form_for @favorite_folder do |f| %>
-        <%= f.association :folder %>
-        <%= f.submit 'Add to Folder', class: "btn-blue" %>
+<div style="padding-bottom: 100px">
+  <div class="card-trip" style="position: relative;">
+    <%= image_tag  @spot.photo %>
+    <%= link_to :back do %>
+      <i class="fa-solid fa-chevron-left" style="position: absolute; top: 15px; left: 15px; color: white; font-size: 35px;"></i>
       <% end %>
-    <% end %>
-    <%# the buttons  %>
-    <% if current_user.favorites.find_by(favoritable_id: @spot.id) %>
-      <%= link_to 'Remove from Liked', toggle_favorite_spot_path(@spot), data:{turbo_method: :post}, class:"btn-black text-decoration-none" %>
-    <% else %>
-      <%= link_to 'Add to Liked', toggle_favorite_spot_path(@spot), data:{turbo_method: :post}, class:"btn-blue text-decoration-none" %>
-    <% end %>
+    <h2 class="card-trip-pricing" style="position: absolute; top: 438px; right: 10px; color: white; font-size: 22px;"><%= @spot.rating %>⭐️</h2>
+    <div class="card-trip-infos">
+
+      <h3><%= @spot.name %></h3>
+      <h6 class='cat-tag-show'> <%= @spot.category %><h6>
+      <p><i class="fa-sharp fa-solid fa-info" style="color:#0074b7">&nbsp;&nbsp;</i><%= @spot.description %></p>
+      <br>
+      <p><i class="fa-solid fa-location-dot" style="color:#0074b7">&nbsp;</i><%= @spot.spot_location %></p>
+      <br>
+      <h5>Bookmark this Spot: </h5>
+      <%# the form to bookmark %>
+      <% if @favorite.present? %>
+        <%= simple_form_for @favorite_folder do |f| %>
+          <%= f.association :folder %>
+          <%= f.submit 'Add to Folder', class: "btn-blue" %>
+        <% end %>
+      <% end %>
+      <%# the buttons  %>
+      <% if current_user.favorites.find_by(favoritable_id: @spot.id) %>
+        <%= link_to 'Remove from Liked', toggle_favorite_spot_path(@spot), data:{turbo_method: :post}, class:"btn-black text-decoration-none" %>
+      <% else %>
+        <%= link_to 'Add to Liked', toggle_favorite_spot_path(@spot), data:{turbo_method: :post}, class:"btn-blue text-decoration-none" %>
+      <% end %>
 
 
 
+    </div>
   </div>
 </div>
 
